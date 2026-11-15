@@ -375,6 +375,114 @@ const products = [
     pageSlug: "vending-machines",
     features: ["Listed product category", "Sanitary pad vending option", "Women-friendly E2T support"],
   },
+  {
+    title: "Steel Porta Cabin",
+    short: "Heavy-duty prefabricated portable cabins for site offices, security & commercial shelters.",
+    text: "Aarya Innovtech Steel Porta Cabins are rugged, thermally insulated, and weather-proof prefabricated structures designed for quick deployment and durability across construction sites and industrial hubs.",
+    icon: Building2,
+    tag: "Prefab structures",
+    accent: "blue",
+    image: "/images/product-catalog/steel-porta-cabin.jpeg",
+    thumb: "/images/product-catalog/steel-porta-cabin.jpeg",
+    pageSlug: "steel-porta-cabin",
+    features: ["Weather-proof & insulated design", "High-grade structural steel frame", "Ready-to-use plug-and-play wiring"],
+  },
+  {
+    title: "Traffic Police Booths",
+    short: "Ergonomic, high-visibility all-weather traffic control and surveillance kiosks.",
+    text: "Smart and durable Traffic Police Booths engineered to provide high visibility, weather protection, and comfort for traffic personnel with 360-degree clear view windows and solar-ready power options.",
+    icon: ShieldCheck,
+    tag: "Civic infrastructure",
+    accent: "orange",
+    image: "/images/product-catalog/traffic-police-booths.png",
+    thumb: "/images/product-catalog/traffic-police-booths.png",
+    pageSlug: "traffic-police-booths",
+    features: ["360-degree surveillance view", "All-weather insulated construction", "Solar and battery backup compatible"],
+  },
+  {
+    title: "Portable Toilet",
+    short: "Compact, relocatable hygienic public toilet units for events, construction & outdoor sites.",
+    text: "Heavy-duty Portable Toilet cabins fabricated with corrosion-resistant panels, integrated waste collection or bio-digester compatibility, and odor-free ventilation.",
+    icon: Droplets,
+    tag: "Public sanitation",
+    accent: "teal",
+    image: "/images/product-catalog/portable-toilet.jpeg",
+    thumb: "/images/product-catalog/portable-toilet.jpeg",
+    pageSlug: "portable-toilet",
+    features: ["Corrosion-resistant durable cabin", "Instant setup with zero civil work", "Hygienic ventilation and easy cleaning"],
+  },
+  {
+    title: "Modular Toilet",
+    short: "Pre-engineered modular toilet blocks with scalable cubicles and modern sanitation fittings.",
+    text: "Modular Toilet complexes designed for municipal corporations, schools, tourist destinations, and commercial campuses with scalable cubicles and water-efficient fixtures.",
+    icon: Droplets,
+    tag: "Sanitation systems",
+    accent: "blue",
+    image: "/images/product-catalog/modular-toilet.jpeg",
+    thumb: "/images/product-catalog/modular-toilet.jpeg",
+    pageSlug: "modular-toilet",
+    features: ["Scalable multi-cabin configurations", "Water-efficient fittings", "Heavy-duty low maintenance finishes"],
+  },
+  {
+    title: "Composter for Solid Waste Management",
+    short: "Decentralized commercial composting machine for organic and wet solid waste conversion.",
+    text: "Advanced decentralized composter designed for bulk solid waste processing. Converts organic wet waste, food leftovers, and garden scrap into rich pathogen-free compost within 24 to 36 hours.",
+    icon: Leaf,
+    tag: "Waste management",
+    accent: "lime",
+    image: "/images/product-catalog/composter-solid-waste.jpeg",
+    thumb: "/images/product-catalog/composter-solid-waste.jpeg",
+    pageSlug: "solid-waste-composter",
+    features: ["Rapid 24-36 hour composting cycle", "Aerobic decomposition with odor control", "Custom daily capacities up to multi-tonnes"],
+  },
+  {
+    title: "Platform Trolley",
+    short: "Heavy-duty material handling industrial platform trolleys for warehouses & workshops.",
+    text: "Industrial-grade Platform Trolleys designed for heavy material handling, ergonomic maneuverability, and high load-bearing strength with wear-resistant industrial caster wheels.",
+    icon: Factory,
+    tag: "Material handling",
+    accent: "orange",
+    image: "/images/product-catalog/platform-trolley.png",
+    thumb: "/images/product-catalog/platform-trolley.png",
+    pageSlug: "platform-trolley",
+    features: ["High load capacity steel deck", "Heavy-duty anti-friction caster wheels", "Ergonomic push-pull handle"],
+  },
+  {
+    title: "Stainless Steel Shelf Rack",
+    short: "Rust-proof commercial grade SS 304 tiered storage shelving systems.",
+    text: "Precision-crafted Stainless Steel (SS 304) multi-tier storage shelving systems ideal for pharma, commercial kitchens, cleanrooms, and food storage facilities.",
+    icon: Wrench,
+    tag: "Storage solutions",
+    accent: "blue",
+    image: "/images/product-catalog/ss-shelf-rack.jpeg",
+    thumb: "/images/product-catalog/ss-shelf-rack.jpeg",
+    pageSlug: "stainless-steel-shelf-rack",
+    features: ["Food-grade SS 304 construction", "Multi-tier adjustable shelf heights", "Corrosion and rust-resistant finish"],
+  },
+  {
+    title: "Kitchen Equipment",
+    short: "Commercial kitchen organizer racks, food preparation & storage systems.",
+    text: "Complete range of commercial kitchen storage racks and food processing equipment including heavy-duty SS racks, dough kneaders, atta chakki, and vegetable cutters.",
+    icon: Store,
+    tag: "Commercial kitchen",
+    accent: "teal",
+    image: "/images/product-catalog/kitchen-storage-racks.png",
+    thumb: "/images/product-catalog/kitchen-storage-racks.png",
+    pageSlug: "kitchen-storage-racks",
+    features: ["Heavy-duty stainless steel build", "Commercial food prep & storage", "Custom kitchen sizing options"],
+  },
+  {
+    title: "Heavy Duty Storage Racks",
+    short: "High-capacity warehouse industrial pallet and cargo racking systems.",
+    text: "High-capacity racking engineered for warehouses, manufacturing facilities, and distribution hubs with high-tensile structural steel and epoxy powder-coated scratch protection.",
+    icon: Factory,
+    tag: "Industrial racking",
+    accent: "orange",
+    image: "/images/product-catalog/heavy-duty-storage-racks.png",
+    thumb: "/images/product-catalog/heavy-duty-storage-racks.png",
+    pageSlug: "heavy-duty-storage-racks",
+    features: ["High-tensile structural steel frames", "Multi-tier modular vertical layout", "Epoxy powder-coated corrosion protection"],
+  },
 
 ];
 
@@ -480,7 +588,7 @@ const solutionJourneys = [
 ];
 
 const stats = [
-  { value: "2010", label: "Since", detail: "OEM in hygiene sector", icon: Award },
+  { value: "2019", label: "Since", detail: "OEM in hygiene sector", icon: Award },
   { value: "500L", label: "Water tank", detail: "E2T overhead tank quantity", icon: Droplets },
   { value: ">99%", label: "Pathogen reduction", detail: "Bio-Digester hygiene performance", icon: ShieldCheck },
   { value: "24x7", label: "Surveillance", detail: "Voice assistance and anti-theft alarm", icon: Monitor },
@@ -2142,7 +2250,7 @@ function App() {
                             <m.div className="hero-proof-strip" aria-label="Aarya Innovtech proof points" variants={heroItemVariants} style={{ marginTop: "32px", width: "fit-content" }}>
                               <div>
                                 <ShieldCheck size={22} />
-                                <p><strong>OEM since 2010</strong><span>Trusted by government & private organizations</span></p>
+                                <p><strong>OEM since 2019</strong><span>Trusted by government & private organizations</span></p>
                               </div>
                               <div>
                                 <BadgeCheck size={22} />
@@ -2238,7 +2346,7 @@ function App() {
                         <div className="container intro-grid" data-reveal>
                           <div>
                             <BadgeCheck size={23} />
-                            <p><strong>OEM since 2010</strong><span>Special purpose machines</span></p>
+                            <p><strong>OEM since 2019</strong><span>Special purpose machines</span></p>
                           </div>
                           <div>
                             <Star size={23} />
@@ -2258,7 +2366,7 @@ function App() {
                               <img src={newImage("11-eco-toilet-ranchi-twin-1200x800.jpg")} alt="Installed electronic eco toilets" loading="lazy" decoding="async" />
                             </div>
                             <div className="experience-badge">
-                              <strong>2010</strong>
+                              <strong>2019</strong>
                               <span>OEM since</span>
                             </div>
                           </div>
@@ -2267,7 +2375,7 @@ function App() {
                             <h2>Original Equipment Manufacturer of special purpose machines.</h2>
                             <p className="lead">
                               Aarya Innovtech is an OEM for hygiene-sector special purpose machines
-                              since 2010.
+                              since 2019.
                             </p>
                             <p>
                               The product range covers Electronic ECO Toilet, Bio-Digester, Organic Waste
@@ -2685,6 +2793,29 @@ function App() {
               <div className="media-caption">
                 <span>{selectedMedia.category}</span>
                 <h2 id="media-title">{selectedMedia.title}</h2>
+                {selectedMedia.quote && (
+                  <blockquote className="media-modal-quote">
+                    &ldquo;{selectedMedia.quote}&rdquo;
+                  </blockquote>
+                )}
+                {selectedMedia.author && (
+                  <span className="media-modal-author">
+                    — {selectedMedia.author}
+                  </span>
+                )}
+                {selectedMedia.link && (
+                  <div className="media-modal-link-wrap">
+                    <a
+                      href={selectedMedia.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="media-modal-linkedin-btn"
+                    >
+                      <Linkedin size={15} />
+                      <span>View on LinkedIn</span>
+                    </a>
+                  </div>
+                )}
               </div>
             </article>
           </div>

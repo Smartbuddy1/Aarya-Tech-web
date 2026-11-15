@@ -5,7 +5,6 @@ const brochurePdf = (file) => `/brochures/${file}`;
 
 const brochureFiles = {
   electronicEcoToilet: brochurePdf("smart-buddy-electronic-eco-toilet.pdf"),
-
   bioDigester: brochurePdf("smart-buddy-bio-digester.pdf"),
   organicWasteComposter: brochurePdf("smart-buddy-organic-waste-composter.pdf"),
   petBottleShredder: brochurePdf("smart-buddy-pet-bottle-shredder-rvm.pdf"),
@@ -17,6 +16,18 @@ const brochureFiles = {
   computerKiosk: brochurePdf("computer-kiosk.pdf"),
   sanitaryVendingMachine: brochurePdf("sanitary-vending-machine.pdf"),
   foodVendingMachine: brochurePdf("food-vending-machine.pdf"),
+  steelPortaCabin: brochurePdf("steel-porta-cabin.pdf"),
+  trafficPoliceBooths: brochurePdf("traffic-police-booths.pdf"),
+  portableToilet: brochurePdf("smart-buddy-portable-frp-toilet.pdf"),
+  modularToilet: brochurePdf("modular-toilet.pdf"),
+  solidWasteComposter: brochurePdf("composter-solid-waste.pdf"),
+  platformTrolley: brochurePdf("platform-trolley.pdf"),
+  stainlessSteelShelfRack: brochurePdf("ss-shelf-rack.pdf"),
+  kitchenStorageRacks: brochurePdf("kitchen-storage-racks.pdf"),
+  heavyDutyStorageRacks: brochurePdf("heavy-duty-storage-racks.pdf"),
+  doughKneader: brochurePdf("dough-kneader.pdf"),
+  attaChakki: brochurePdf("atta-chakki.pdf"),
+  vegetableCutter: brochurePdf("vegetable-cutter.pdf"),
 };
 
 const commonPublicSites = ["Highways", "Malls", "Airports", "Railway Stations", "Tourist Places", "Smart City"];
@@ -413,17 +424,15 @@ const waterAtmKiosk = {
 
 const printingKiosk = {
   slug: "printing-kiosk",
-  title: "Printing Kiosk",
-  navLabel: "Printing Kiosk",
+  title: "Point of Sale (POS) Kiosk",
+  navLabel: "POS Kiosk",
   subtitle: "Automated 24/7 self-service document printing, scanning & photocopying station",
   summary:
     "The Smart Buddy Printing Kiosk provides a seamless, automated self-service document solution. Users can upload documents via WhatsApp, Cloud storage, USB drives, or email and complete secure, high-speed laser printing, scanning, or copying with instant digital UPI payments.",
-  image: "/imagesss/printing kiosk (1).png",
-  imageAlt: "Printing Kiosk",
+  image: "/images/product-catalog/pos-kiosk.png",
+  imageAlt: "Point of Sale (POS) Kiosk",
   galleryImages: [
-    { src: "/imagesss/printing kiosk (1).png", alt: "Printing Kiosk 1" },
-    { src: "/imagesss/printing kiosk (2).png", alt: "Printing Kiosk 2" },
-    { src: "/imagesss/printing kiosk 3.jpeg", alt: "Printing Kiosk 3" },
+    { src: "/images/product-catalog/pos-kiosk.png", alt: "Point of Sale (POS) Kiosk" },
   ],
   heroPoints: [
     "High-speed commercial Laser printing: A4/Legal in crisp Black & White and Full Color",
@@ -531,7 +540,7 @@ const computerKiosk = {
     { title: "Ticket Kiosk", slug: "ticket-kiosk" },
     { title: "Health Kiosk", slug: "health-kiosk" },
     { title: "Water ATM Kiosk", slug: "water-atm-kiosk" },
-    { title: "Printing Kiosk", slug: "printing-kiosk" },
+    { title: "Point of Sale (POS) Kiosk", slug: "printing-kiosk" },
     { title: "Food Kiosk", slug: "food-kiosk" },
   ],
   subtitle: "Industrial interactive information terminal, public service & OEM computing kiosk",
@@ -754,6 +763,602 @@ const vendingMachines = {
   quoteText: "Share your vending application and site details so our engineering team can confirm the right machine model.",
 };
 
+const steelPortaCabin = {
+  slug: "steel-porta-cabin",
+  title: "Steel Porta Cabin",
+  navLabel: "Steel Porta Cabin",
+  subtitle: "Heavy-duty prefabricated portable cabins for site offices, security & commercial shelters",
+  summary:
+    "Aarya Innovtech Steel Porta Cabins are rugged, thermally insulated, and weather-proof prefabricated structures. Designed for quick deployment, durability, and low maintenance across construction sites, security checkpoints, remote industrial projects, and commercial hubs.",
+  image: "/images/product-catalog/steel-porta-cabin.jpeg",
+  imageAlt: "Steel Porta Cabin",
+  galleryImages: [
+    { src: "/images/product-catalog/steel-porta-cabin.jpeg", alt: "Steel Porta Cabin" },
+  ],
+  heroPoints: [
+    "High-grade structural steel frame with anti-corrosive epoxy coating",
+    "Double-wall insulated panels for superior thermal and acoustic comfort",
+    "Pre-fitted electrical wiring, LED lighting, power sockets & MCB board",
+    "Quick crane lifting hooks & forklift base pockets for rapid relocation",
+    "Customizable interior layouts: site office, guard room, store or living quarters",
+  ],
+  infoCards: [
+    { type: "features", title: "Heavy-Duty Construction", text: "Constructed with robust steel framing, fire-retardant wall insulation, and weather-proof exterior finish." },
+    { type: "applications", title: "Where It Can Be Installed", text: "Construction sites, industrial toll plazas, factory premises, mining areas, and event venues." },
+    { type: "benefits", title: "Zero Civil Delay", text: "Delivered 100% pre-fabricated and ready to use immediately upon delivery with zero civil construction." },
+    { type: "customization", title: "Tailored Sizes & Layouts", text: "Available in standard 10x10, 20x10, 40x10 ft dimensions with options for attached washrooms and HVAC." },
+  ],
+  specifications: [
+    { label: "Product Category", value: "Smart Buddy Prefabricated Porta Cabin Series" },
+    { label: "Frame Structure", value: "Heavy-duty MS tubular & channel structural steel framework" },
+    { label: "Wall & Ceiling", value: "Insulated sandwich panels (PUF / Rockwool) with pre-coated sheet" },
+    { label: "Flooring", value: "Marine plywood base finished with heavy-duty PVC vinyl / aluminum checker plate" },
+    { label: "Doors & Windows", value: "Insulated flush door with heavy lock; aluminum powder-coated sliding windows" },
+    { label: "Electricals", value: "Concealed copper wiring, modular switches, LED batten lights, and MCB protection" },
+    { label: "Lifting / Transit", value: "Integrated high-tensile top lifting lugs for crane loading & unloading" },
+  ],
+  technicalDetails: [
+    "Corrosion-resistant epoxy primer and two coats of polyurethane enamel paint withstand harsh industrial weather.",
+    "Engineered with leak-proof sloped ceiling and concealed water drainage channels.",
+    "Pre-wired with provision for split or window air-conditioner installation.",
+  ],
+  brochureUrl: brochureFiles.steelPortaCabin,
+  brochureFilename: "Smart_Buddy_Steel_Porta_Cabin.pdf",
+  downloads: [
+    {
+      label: "Steel Porta Cabin brochure",
+      url: brochureFiles.steelPortaCabin,
+      filename: "Smart_Buddy_Steel_Porta_Cabin.pdf",
+    },
+  ],
+  quoteText: "Share your required dimensions, layout, and site location for a quick Steel Porta Cabin quote.",
+};
+
+const trafficPoliceBooths = {
+  slug: "traffic-police-booths",
+  title: "Traffic Police Booths",
+  navLabel: "Traffic Police Booths",
+  subtitle: "Ergonomic, high-visibility all-weather traffic control and surveillance kiosks",
+  summary:
+    "Smart and durable Traffic Police Booths engineered to provide high visibility, weather protection, and comfort for traffic personnel. Equipped with 360-degree clear view windows, solar-ready power options, and sturdy steel construction.",
+  image: "/images/product-catalog/traffic-police-booths.png",
+  imageAlt: "Traffic Police Booths",
+  galleryImages: [
+    { src: "/images/product-catalog/traffic-police-booths.png", alt: "Traffic Police Booths" },
+  ],
+  heroPoints: [
+    "360-degree all-round panoramic viewing windows for optimal traffic surveillance",
+    "Heavy-duty insulated canopy for protection against extreme sun, rain, and winds",
+    "Integrated ergonomic operator desk with lockable storage and charging points",
+    "Solar panel mounting ready for continuous off-grid illumination and beacon lights",
+    "Compact footprint ideal for busy road intersections, checkpoints, and toll lanes",
+  ],
+  infoCards: [
+    { type: "features", title: "High Visibility", text: "Bright reflective exterior styling with tinted safety glass for maximum road safety." },
+    { type: "applications", title: "Where It Can Be Installed", text: "City road junctions, highway toll plazas, checkpoint barriers, VIP transit corridors, and parking zones." },
+    { type: "benefits", title: "Officer Comfort & Safety", text: "Shields officers from harsh heatwaves, heavy downpours, pollution, and high-decibel road noise." },
+    { type: "customization", title: "Smart Upgrades", text: "Options for PA speaker system, roof beacon light, solar inverter, and CCTV camera mounts." },
+  ],
+  specifications: [
+    { label: "Structure", value: "Galvanized mild steel chassis with anti-rust polyurethane coating" },
+    { label: "Glazing", value: "Toughened safety glass / Polycarbonate scratch-resistant sliding panes" },
+    { label: "Roofing", value: "Double insulated weather-canopy with extended overhang sunshades" },
+    { label: "Internal Amenities", value: "Built-in writing desk, ergonomic swivel stool, LED lights & fan" },
+    { label: "Power Supply", value: "230V AC mains connection with solar hybrid battery backup provision" },
+  ],
+  technicalDetails: [
+    "Raised platform floor with anti-skid aluminum tread plate keeps the booth dry during road waterlogging.",
+    "Fitted with high-intensity amber LED flasher light on the canopy for nighttime roadside visibility.",
+    "Vandal-resistant lockable door and internal emergency alarm switch.",
+  ],
+  brochureUrl: brochureFiles.trafficPoliceBooths,
+  brochureFilename: "Smart_Buddy_Traffic_Police_Booth.pdf",
+  downloads: [
+    {
+      label: "Traffic Police Booth brochure",
+      url: brochureFiles.trafficPoliceBooths,
+      filename: "Smart_Buddy_Traffic_Police_Booth.pdf",
+    },
+  ],
+  quoteText: "Contact us for municipality and traffic police department booth procurement and custom branding.",
+};
+
+const portableToilet = {
+  slug: "portable-toilet",
+  title: "Portable Toilet",
+  navLabel: "Portable Toilet",
+  subtitle: "Compact, relocatable hygienic public toilet units for events, construction & outdoor sites",
+  summary:
+    "Heavy-duty Portable Toilet cabins fabricated with corrosion-resistant panels, integrated waste collection or bio-digester compatibility, and odor-free ventilation. Easy to transport, clean, and install anywhere without civil construction.",
+  image: "/images/product-catalog/portable-toilet.jpeg",
+  imageAlt: "Portable Toilet",
+  galleryImages: [
+    { src: "/images/product-catalog/portable-toilet.jpeg", alt: "Portable Toilet" },
+  ],
+  heroPoints: [
+    "Instant deployment without permanent foundation or complicated plumbing",
+    "Corrosion-resistant FRP / Polyethylene / Galvanized steel cabin construction",
+    "Integrated freshwater supply tank and effluent holding / bio-digester tank",
+    "Hands-free foot-pump / gravity flush for superior contact-free hygiene",
+    "Natural daylight translucent roof and cross-ventilation louvers for fresh airflow",
+  ],
+  infoCards: [
+    { type: "features", title: "Ready-to-Use Mobility", text: "Can be easily loaded, relocated, and set up in minutes for immediate sanitary service." },
+    { type: "applications", title: "Where It Can Be Installed", text: "Construction projects, outdoor weddings, sports events, pilgrimage gatherings, and disaster relief camps." },
+    { type: "benefits", title: "Zero Civil Work", text: "Eliminates civil masonry costs and water drainage infrastructure delays." },
+    { type: "customization", title: "Pan & Tank Variants", text: "Available with Indian squat pan or Western commode, plus optional Bio-Digester tank integration." },
+  ],
+  specifications: [
+    { label: "Cabin Type", value: "Single Cubicle Heavy Duty Portable Toilet Unit" },
+    { label: "Material", value: "UV-stabilized FRP / Food-grade Polyethylene / Pre-coated GI" },
+    { label: "Water Tank", value: "Overhead freshwater tank (100L - 250L capacity)" },
+    { label: "Waste Disposal", value: "Integrated bottom containment tank or direct connection to Bio-Digester / sewer" },
+    { label: "Fittings", value: "Mirror, coat hook, soap dispenser, washbasin, and foot-operated water tap" },
+  ],
+  technicalDetails: [
+    "Non-absorbent smooth interior surfaces allow fast, pressure-wash cleaning.",
+    "Integrated odor-extraction ventilation pipe discharges gases above roof level.",
+    "Self-closing door mechanism with occupancy indicator latch.",
+  ],
+  brochureUrl: brochureFiles.portableToilet,
+  brochureFilename: "Smart_Buddy_Portable_FRP_Toilet.pdf",
+  downloads: [
+    {
+      label: "Portable Toilet brochure",
+      url: brochureFiles.portableToilet,
+      filename: "Smart_Buddy_Portable_FRP_Toilet.pdf",
+    },
+  ],
+  quoteText: "Reach out for bulk portable toilet orders, event rentals, or custom civic project specifications.",
+};
+
+const modularToilet = {
+  slug: "modular-toilet",
+  title: "Modular Toilet",
+  navLabel: "Modular Toilet",
+  subtitle: "Pre-engineered modular toilet blocks with scalable cubicles and modern sanitation fittings",
+  summary:
+    "Modular Toilet complexes designed for municipal corporations, schools, tourist destinations, and commercial campuses. Features scalable multi-seat cubicle configurations, low water consumption fixtures, and durable stainless steel or composite finishes.",
+  image: "/images/product-catalog/modular-toilet.jpeg",
+  imageAlt: "Modular Toilet",
+  galleryImages: [
+    { src: "/images/product-catalog/modular-toilet.jpeg", alt: "Modular Toilet" },
+  ],
+  heroPoints: [
+    "Modular multi-cubicle layout for separate male, female, and accessible (Divyangjan) users",
+    "High-durability stainless steel (SS 304) sanitary wares for tamper-proof public use",
+    "Factory precision pre-engineered panels ensure rapid on-site assembly within days",
+    "Water-saving push taps and dual-flush mechanisms drastically reduce water wastage",
+    "Eco-friendly waste treatment integration with on-site Smart Buddy Bio-Digester tanks",
+  ],
+  infoCards: [
+    { type: "features", title: "Modular Scalability", text: "Expand from 2-cubicle units to 10+ cubicle public sanitary complexes effortlessly." },
+    { type: "applications", title: "Where It Can Be Installed", text: "Smart city projects, municipal parks, highway transit amenities, bus terminals, and rural schools." },
+    { type: "benefits", title: "Durable & Vandal-Proof", text: "Engineered with anti-corrosive stainless steel partitions, heavy locks, and impact-resistant walls." },
+    { type: "customization", title: "Solar & IoT Enabled", text: "Optional solar rooftop panels, automated cleaning cycles, and smart occupancy monitoring." },
+  ],
+  specifications: [
+    { label: "Configuration", value: "2 / 4 / 6 / 8 / 10 Seater Community Modular Toilet Blocks" },
+    { label: "Superstructure", value: "Galvanized steel framework with ACP / PUF insulated composite wall panels" },
+    { label: "Interior Finishes", value: "Anti-graffiti SS 304 / HPL compact laminate cubicle partitions" },
+    { label: "Sanitary Wares", value: "Stainless Steel 304 European commodes, Indian pans, and multi-user urinals" },
+    { label: "Water Storage", value: "Integrated high-capacity overhead tanks with level float sensors" },
+  ],
+  technicalDetails: [
+    "Modular structural engineering allows relocation or capacity expansion as site footfall grows.",
+    "Integrated concealed plumbing lines with isolation valves for quick maintenance without shutting down the block.",
+    "Natural ridge-vent roof architecture maximizes passive airflow and ambient daylighting.",
+  ],
+  brochureUrl: brochureFiles.modularToilet,
+  brochureFilename: "Smart_Buddy_Modular_Toilet.pdf",
+  downloads: [
+    {
+      label: "Modular Toilet brochure",
+      url: brochureFiles.modularToilet,
+      filename: "Smart_Buddy_Modular_Toilet.pdf",
+    },
+  ],
+  quoteText: "Submit your community sanitation requirements to get a customized modular toilet layout design.",
+};
+
+const solidWasteComposter = {
+  slug: "solid-waste-composter",
+  title: "Composter for Solid Waste Management",
+  navLabel: "Solid Waste Composter",
+  subtitle: "Decentralized commercial composting machine for organic and wet solid waste conversion",
+  summary:
+    "Advanced decentralized composter designed for bulk solid waste processing. Converts organic wet waste, food leftovers, and garden scrap into rich pathogen-free compost within 24 to 36 hours with automated temperature and odor control.",
+  image: "/images/product-catalog/composter-solid-waste.jpeg",
+  imageAlt: "Composter for Solid Waste Management",
+  galleryImages: [
+    { src: "/images/product-catalog/composter-solid-waste.jpeg", alt: "Composter for Solid Waste Management" },
+  ],
+  heroPoints: [
+    "Rapid 24 to 36 hour organic composting cycle using thermophilic aerobic decomposition",
+    "Heavy-duty internal shredder and dual-shaft mixing paddles for uniform processing",
+    "Odor-free operation with integrated bio-filter and exhaust air management",
+    "Continuous automated heating and moisture control for 85-90% volume reduction",
+    "Built with Stainless Steel 304 processing chambers to resist organic acids and corrosion",
+  ],
+  infoCards: [
+    { type: "features", title: "Rapid Decomposition", text: "Accelerated aerobic digestion turns organic waste into nutrient-rich soil enricher in hours." },
+    { type: "applications", title: "Where It Can Be Installed", text: "Residential townships, corporate IT campuses, vegetable mandis, hotel kitchens, and municipal wards." },
+    { type: "benefits", title: "Up to 90% Volume Cut", text: "Reduces landfill hauling costs, carbon footprint, and municipal solid waste handling charges." },
+    { type: "customization", title: "Capacity Options", text: "Wide capacity spectrum starting from 50 kg/day up to 2,000 kg/day decentralized models." },
+  ],
+  specifications: [
+    { label: "Model Capacities", value: "50 kg, 100 kg, 250 kg, 500 kg, 1000 kg up to 2000 kg/day" },
+    { label: "Processing Chamber", value: "Stainless Steel SS 304 interior with thermal insulation jacket" },
+    { label: "Motor & Drive", value: "Heavy-duty helical geared motor with overload reverse protection" },
+    { label: "Heating Mechanism", value: "Smart ceramic heating jackets with automated thermostatic cut-off" },
+    { label: "PLC Control", value: "Microcontroller / PLC automated panel with digital temperature & cycle display" },
+  ],
+  technicalDetails: [
+    "Continuous bio-enzyme thermophilic bacterial action destroys pathogenic microbes and weed seeds.",
+    "Integrated exhaust blower with activated carbon filter neutralizes all foul odors completely.",
+    "Emergency safety limit switch stops mixing paddles immediately upon opening the top feeding door.",
+  ],
+  brochureUrl: brochureFiles.solidWasteComposter,
+  brochureFilename: "Smart_Buddy_Solid_Waste_Composter.pdf",
+  downloads: [
+    {
+      label: "Solid Waste Composter brochure",
+      url: brochureFiles.solidWasteComposter,
+      filename: "Smart_Buddy_Solid_Waste_Composter.pdf",
+    },
+  ],
+  quoteText: "Let us know your daily organic waste generation to calculate the ideal composter sizing.",
+};
+
+const platformTrolley = {
+  slug: "platform-trolley",
+  title: "Platform Trolley",
+  navLabel: "Platform Trolley",
+  subtitle: "Heavy-duty material handling industrial platform trolleys for warehouses & workshops",
+  summary:
+    "Industrial-grade Platform Trolleys designed for heavy material handling, ergonomic maneuverability, and high load-bearing strength. Manufactured with high-strength steel chassis and wear-resistant industrial caster wheels.",
+  image: "/images/product-catalog/platform-trolley.png",
+  imageAlt: "Platform Trolley",
+  galleryImages: [
+    { src: "/images/product-catalog/platform-trolley.png", alt: "Platform Trolley" },
+  ],
+  heroPoints: [
+    "High load-bearing capacity from 250 kg up to 1,500 kg heavy industrial loads",
+    "Reinforced mild steel / stainless steel platform bed with anti-skid ribbed surface",
+    "Heavy-duty PU / rubber caster wheels with 360-degree precision ball bearing swivel",
+    "Ergonomic tubular push-handle engineered to reduce operator strain and fatigue",
+    "Durable epoxy powder coat finish resists scratches, chemicals, and industrial oil spills",
+  ],
+  infoCards: [
+    { type: "features", title: "Heavy Duty Capacity", text: "Handles heavy goods, machinery parts, cartons, and raw materials smoothly." },
+    { type: "applications", title: "Where It Can Be Installed", text: "Warehouses, manufacturing assembly lines, retail stockrooms, airports, and transport godowns." },
+    { type: "benefits", title: "Smooth & Silent Transit", text: "Double-bearing caster wheels roll silently across concrete, tile, and epoxy factory floors." },
+    { type: "customization", title: "Deck Customization", text: "Options for foldable handles, side mesh railings, and stainless steel food-grade decks." },
+  ],
+  specifications: [
+    { label: "Load Capacity", value: "250 kg, 500 kg, 750 kg, 1,000 kg and 1,500 kg models" },
+    { label: "Platform Deck", value: "Heavy-gauge CRCA mild steel plate with anti-skid embossed pattern / SS 304" },
+    { label: "Wheel Diameter", value: "6\" - 8\" Heavy Duty Polyurethane (PU) / Solid Rubber Castors" },
+    { label: "Wheel Configuration", value: "2 Fixed Wheels + 2 Swivel Casters with integrated foot brake" },
+    { label: "Handle Style", value: "Rigid welded or collapsible folding tubular push-handle" },
+  ],
+  technicalDetails: [
+    "Under-deck channel cross-ribbing prevents platform sagging or warping under heavy centralized loads.",
+    "Foot-activated brake pedal on swivel wheels ensures stable holding on ramps and loading docks.",
+    "All steel edges are laser deburred and rounded for safe material handling.",
+  ],
+  brochureUrl: brochureFiles.platformTrolley,
+  brochureFilename: "Smart_Buddy_Platform_Trolley.pdf",
+  downloads: [
+    {
+      label: "Platform Trolley brochure",
+      url: brochureFiles.platformTrolley,
+      filename: "Smart_Buddy_Platform_Trolley.pdf",
+    },
+  ],
+  quoteText: "Share your platform dimensions and weight carrying requirement for a custom trolley quote.",
+};
+
+const stainlessSteelShelfRack = {
+  slug: "stainless-steel-shelf-rack",
+  title: "Stainless Steel Shelf Rack",
+  navLabel: "SS Shelf Rack",
+  subtitle: "Rust-proof commercial grade SS 304 tiered storage shelving systems",
+  summary:
+    "Precision-crafted Stainless Steel (SS 304) multi-tier storage shelving systems. Ideal for pharmaceutical units, commercial kitchens, cleanrooms, and food storage facilities requiring strict hygiene, anti-corrosive properties, and high weight stability.",
+  image: "/images/product-catalog/ss-shelf-rack.jpeg",
+  imageAlt: "Stainless Steel Shelf Rack",
+  galleryImages: [
+    { src: "/images/product-catalog/ss-shelf-rack.jpeg", alt: "Stainless Steel Shelf Rack" },
+  ],
+  heroPoints: [
+    "100% Food-grade Stainless Steel 304 / 316 construction for zero rust and chemical resistance",
+    "Multi-tier heavy load shelves (3 to 6 tiers) with solid or perforated airflow options",
+    "Adjustable bullet leveling feet to ensure rock-solid stability on uneven floor surfaces",
+    "Crevice-free hygienic sanitary welds designed for effortless sanitation and washing",
+    "High per-tier weight carrying capacity engineered for heavy containers, vessels & spares",
+  ],
+  infoCards: [
+    { type: "features", title: "100% Rust-Proof SS 304", text: "Provides complete resistance to moisture, steam, sanitizing agents, and mild acids." },
+    { type: "applications", title: "Where It Can Be Installed", text: "Commercial kitchens, cold storage rooms, pharma labs, hospitals, and food processing plants." },
+    { type: "benefits", title: "Hygienic Sanitation", text: "Smooth satin polish prevents bacterial harboring and supports direct pressure jet washing." },
+    { type: "customization", title: "Modular Heights", text: "Available in custom tier numbers, solid sheet, louvered, or tubular rack designs." },
+  ],
+  specifications: [
+    { label: "Material Grade", value: "Food-Grade Stainless Steel AISI 304 (AISI 316 available on request)" },
+    { label: "Number of Tiers", value: "3, 4, 5, or 6 Tier configurations" },
+    { label: "Load Capacity", value: "Up to 150 - 250 kg uniformly distributed load (UDL) per tier" },
+    { label: "Leg Construction", value: "38mm heavy-wall round / square SS pipes with adjustable nylon/SS feet" },
+    { label: "Surface Finish", value: "240 Grit satin brush finish for anti-glare scratch resistance" },
+  ],
+  technicalDetails: [
+    "Reinforced under-shelf hat-channel stiffeners eliminate shelf bending under concentrated point loads.",
+    "Smooth TIG welded joints argon purged to eliminate blackening and corrosion points.",
+    "Adjustable leveling studs compensate for floor slopes up to 25mm.",
+  ],
+  brochureUrl: brochureFiles.stainlessSteelShelfRack,
+  brochureFilename: "Smart_Buddy_Stainless_Steel_Shelf_Rack.pdf",
+  downloads: [
+    {
+      label: "Stainless Steel Shelf Rack brochure",
+      url: brochureFiles.stainlessSteelShelfRack,
+      filename: "Smart_Buddy_Stainless_Steel_Shelf_Rack.pdf",
+    },
+  ],
+  quoteText: "Contact us with your room dimensions and tier requirements for customized SS storage racks.",
+};
+
+const kitchenStorageRacks = {
+  slug: "kitchen-storage-racks",
+  title: "Kitchen Equipment",
+  navLabel: "Kitchen Equipment",
+  subItems: [
+    { title: "Kitchen Storage Racks", slug: "kitchen-storage-racks" },
+    { title: "Dough Kneader", slug: "dough-kneader" },
+    { title: "Atta Chakki", slug: "atta-chakki" },
+    { title: "Vegetable Cutter", slug: "vegetable-cutter" },
+  ],
+  subtitle: "Commercial kitchen organizer racks, food preparation & storage systems",
+  summary:
+    "Heavy-duty commercial kitchen racks built for organized, hygienic, and accessible utensil and ingredient storage. Built with easy-to-clean stainless steel surfaces, high load tolerance, and ventilated shelving grids.",
+  image: "/images/product-catalog/kitchen-storage-racks.png",
+  imageAlt: "Kitchen Equipment",
+  galleryImages: [
+    { src: "/images/product-catalog/kitchen-storage-racks.png", alt: "Kitchen Storage Racks" },
+  ],
+  heroPoints: [
+    "Specifically optimized for commercial cookware, pots, pans, GN containers, and bulk dry supplies",
+    "Ventilated grid shelving allows natural air circulation and rapid drainage of washed items",
+    "Heavy-gauge stainless steel build resists grease, cooking oils, high humidity, and heat",
+    "Compact vertical storage design maximizes usable prep and cooking floor area",
+    "Rounded safety edges prevent accidental scratches and tears to staff and aprons",
+  ],
+  infoCards: [
+    { type: "features", title: "Food-Safe Storage", text: "Compliant with commercial food hygiene and restaurant kitchen safety standards." },
+    { type: "applications", title: "Where It Can Be Installed", text: "Hotel kitchens, restaurant back-of-house, industrial canteens, cloud kitchens, and bakeries." },
+    { type: "benefits", title: "Fast Utensil Drying", text: "Ventilated pipe and wire shelf profiles accelerate drying of washed kitchenware." },
+    { type: "customization", title: "Tailored Sizes", text: "Custom length, depth, and tier spacing designed to fit pot wash and pantry areas." },
+  ],
+  specifications: [
+    { label: "Material", value: "Commercial Grade Stainless Steel (SS 202 / SS 304 options)" },
+    { label: "Shelf Styles", value: "Tubular pipe shelf, perforated sheet, or solid sheet tiers" },
+    { label: "Tier Options", value: "3 to 5 Tiers with generous 350mm - 450mm vertical clearance" },
+    { label: "Feet / Mobility", value: "Heavy-duty leveling bullet feet or optional locking swivel casters" },
+    { label: "Weight Rating", value: "100 - 180 kg per shelf capacity" },
+  ],
+  technicalDetails: [
+    "Open tubular design prevents grease and dust trap corners, simplifying daily kitchen sanitation.",
+    "All welding points are fully ground and polished to match the parent brushed stainless finish.",
+    "Can be paired with wall-mounting brackets for extreme load stability in bustling kitchens.",
+  ],
+  brochureUrl: brochureFiles.kitchenStorageRacks,
+  brochureFilename: "Smart_Buddy_Kitchen_Storage_Rack.pdf",
+  downloads: [
+    {
+      label: "Kitchen Storage Rack brochure",
+      url: brochureFiles.kitchenStorageRacks,
+      filename: "Smart_Buddy_Kitchen_Storage_Rack.pdf",
+    },
+  ],
+  quoteText: "Tell us about your kitchen layout and storage needs for a tailored commercial rack quote.",
+};
+
+const heavyDutyStorageRacks = {
+  slug: "heavy-duty-storage-racks",
+  title: "Heavy Duty Storage Racks",
+  navLabel: "Heavy Duty Racks",
+  subtitle: "High-capacity warehouse industrial pallet and cargo racking systems",
+  summary:
+    "Engineered for warehouses, manufacturing facilities, and distribution hubs. Built with high-tensile structural steel, powder-coated scratch protection, and modular expansion capabilities for maximum vertical space utilization.",
+  image: "/images/product-catalog/heavy-duty-storage-racks.png",
+  imageAlt: "Heavy Duty Storage Racks",
+  galleryImages: [
+    { src: "/images/product-catalog/heavy-duty-storage-racks.png", alt: "Heavy Duty Storage Racks" },
+  ],
+  heroPoints: [
+    "High-tonnage load capacity from 500 kg up to 3,000 kg per storage beam level",
+    "Cold-rolled high-tensile steel upright frames with precision teardrop / slot pitch",
+    "Adjustable beam levels with safety locking pins to prevent accidental dislodgement",
+    "Durable electrostatic epoxy powder coating for scratch and rust resistance",
+    "Modular architecture enables easy expansion, re-configuration, and bay additions",
+  ],
+  infoCards: [
+    { type: "features", title: "Maximum Vertical Space", text: "Transforms unused warehouse ceiling height into high-density organized storage." },
+    { type: "applications", title: "Where It Can Be Installed", text: "Logistics warehouses, raw material yards, e-commerce fulfillment hubs, and heavy auto engineering plants." },
+    { type: "benefits", title: "Forklift & Manual Access", text: "Suitable for direct pallet handling by forklifts, reach trucks, or manual picking." },
+    { type: "customization", title: "Rack Layouts", text: "Selective pallet racking, drive-in racks, cantilever racks, or heavy-duty shelving." },
+  ],
+  specifications: [
+    { label: "Load Capacity", value: "500 kg to 3,000 kg per beam level (Customizable for higher tonnages)" },
+    { label: "Upright Frame", value: "Roll-formed high-strength structural steel columns (80x60mm to 100x70mm)" },
+    { label: "Beams", value: "Double C-section box beams with multi-claw heavy connector brackets" },
+    { label: "Height Options", value: "Heights from 2 meters up to 10 meters multi-tier structures" },
+    { label: "Deck Options", value: "Wire mesh decking, heavy steel panel decks, or wooden battens" },
+  ],
+  technicalDetails: [
+    "Includes floor anchoring base plates and high-tensile expansion anchor bolts for seismic and wind safety.",
+    "Integrated column guard protectors absorb impact from accidental forklift collisions.",
+    "Safety locking pins on each beam connector ensure fail-safe engagement under heavy dynamic loading.",
+  ],
+  brochureUrl: brochureFiles.heavyDutyStorageRacks,
+  brochureFilename: "Smart_Buddy_Heavy_Duty_Storage_Rack.pdf",
+  downloads: [
+    {
+      label: "Heavy Duty Storage Rack brochure",
+      url: brochureFiles.heavyDutyStorageRacks,
+      filename: "Smart_Buddy_Heavy_Duty_Storage_Rack.pdf",
+    },
+  ],
+  quoteText: "Share your warehouse floor area, ceiling height, and pallet load specs for a custom racking layout.",
+};
+
+const doughKneader = {
+  slug: "dough-kneader",
+  title: "Dough Kneader",
+  navLabel: "Dough Kneader",
+  subtitle: "Commercial high-torque flour dough kneading machines for bakeries, mess & food units",
+  summary:
+    "High-performance commercial Dough Kneaders engineered for uniform, effortless flour kneading. Built with heavy-duty gearboxes, food-grade stainless steel bowls, and protective safety lids for bulk commercial kitchens, hotels, and bakeries.",
+  image: "/images/product-catalog/dough-kneader.png",
+  imageAlt: "Dough Kneader",
+  galleryImages: [
+    { src: "/images/product-catalog/dough-kneader.png", alt: "Dough Kneader" },
+  ],
+  heroPoints: [
+    "Rapid, uniform dough kneading in under 5 to 8 minutes per batch",
+    "Food-contact bowl, spiral arm, and breaker bar made of certified Food Grade SS 304",
+    "Heavy-duty copper-wound motor with oil-lubricated silent reduction gearbox",
+    "Safety interlock grill stops the motor instantly when opened during operation",
+    "Forward and reverse rotation control for effortless dough discharge and cleaning",
+  ],
+  infoCards: [
+    { type: "features", title: "Fast & Consistent Mixing", text: "Kneads soft, pliable, and perfectly aerated dough for rotis, chapatis, bread, and pizzas." },
+    { type: "applications", title: "Where It Can Be Installed", text: "Commercial bakeries, hotel kitchens, temple trust canteens, student hostels, and catering companies." },
+    { type: "benefits", title: "Eliminates Manual Labor", text: "Replaces hours of strenuous physical kneading with consistent automated push-button batches." },
+    { type: "customization", title: "Capacity Range", text: "Available from compact 5 kg models up to bulk 50 kg and 100 kg per batch machines." },
+  ],
+  specifications: [
+    { label: "Batch Capacity", value: "5 kg, 10 kg, 20 kg, 40 kg, 50 kg, and 100 kg dough per batch" },
+    { label: "Bowl & Arm Material", value: "Food-Grade Stainless Steel AISI 304 mirror finish" },
+    { label: "Motor Power", value: "1 HP to 5 HP Heavy-duty 3-Phase / 1-Phase Copper Motor" },
+    { label: "Drive System", value: "Heavy-duty helical reduction gearbox with V-belt transmission" },
+    { label: "Kneading Time", value: "Approx. 5 - 10 minutes per batch depending on flour consistency" },
+  ],
+  technicalDetails: [
+    "Heavy cast iron base chassis absorbs all rotational vibration during thick dough mixing.",
+    "Integrated emergency stop button and thermal overload circuit breaker protect the motor.",
+    "Smooth bowl interior design leaves minimal residue, saving flour and speeding cleanup.",
+  ],
+  brochureUrl: brochureFiles.doughKneader,
+  brochureFilename: "Smart_Buddy_Dough_Kneader.pdf",
+  downloads: [
+    {
+      label: "Dough Kneader brochure",
+      url: brochureFiles.doughKneader,
+      filename: "Smart_Buddy_Dough_Kneader.pdf",
+    },
+  ],
+  quoteText: "Specify your required dough batch size in kilograms for immediate pricing and model recommendations.",
+};
+
+const attaChakki = {
+  slug: "atta-chakki",
+  title: "Atta Chakki",
+  navLabel: "Atta Chakki",
+  subtitle: "Commercial and industrial grain pulverizing flour mill machines",
+  summary:
+    "Commercial grade Atta Chakki / Flour Mill engineered for continuous, cool-grinding of wheat, grains, and spices. Features heavy-duty stone/cutter options, low power consumption, minimal nutrient loss, and vibration-damped construction.",
+  image: "/images/product-catalog/atta-chakki.png",
+  imageAlt: "Atta Chakki",
+  galleryImages: [
+    { src: "/images/product-catalog/atta-chakki.png", alt: "Atta Chakki" },
+  ],
+  heroPoints: [
+    "Cool-grinding technology maintains grain nutrients, taste, and dietary fiber",
+    "Suitable for wheat, besan (gram flour), maize, millet, rice, and dry spices",
+    "Heavy-duty cast stone / steel emery disc with micro-adjustment regulator",
+    "Energy-efficient high-efficiency motor engineered for continuous commercial milling",
+    "Dust-free collection chamber with heavy-duty air filter bag system",
+  ],
+  infoCards: [
+    { type: "features", title: "High Grinding Output", text: "Continuously produces fine, uniform flour with adjustable fineness settings." },
+    { type: "applications", title: "Where It Can Be Installed", text: "Commercial flour mills, grocery store kiosks, institutional canteens, and agro-processing units." },
+    { type: "benefits", title: "Nutrient Retention", text: "Controlled grinding temperature prevents burning the flour, keeping vitamins intact." },
+    { type: "customization", title: "Motor Capacities", text: "Ranges from 3 HP commercial units to 15+ HP industrial milling machines." },
+  ],
+  specifications: [
+    { label: "Grinding Capacity", value: "30 kg/hr, 50 kg/hr, 100 kg/hr up to 300 kg/hr" },
+    { label: "Motor Rating", value: "3 HP, 5 HP, 7.5 HP, 10 HP (Single Phase / Three Phase options)" },
+    { label: "Grinding Mechanism", value: "Heavy-duty emery stone discs / Stainless steel high-speed beater cutters" },
+    { label: "Hopper Capacity", value: "15 kg to 50 kg food-grade stainless steel hopper with slide regulator" },
+    { label: "Body Construction", value: "Heavy-gauge fabricated steel chassis with powder coat / SS enclosure" },
+  ],
+  technicalDetails: [
+    "Equipped with dynamic balancing on the main rotor shaft for quiet, low-vibration operation.",
+    "Micrometer gap adjustment knob allows instant switching from coarse rava to ultra-fine flour.",
+    "Integrated magnetic separator in the hopper catches stray metal particles before grinding.",
+  ],
+  brochureUrl: brochureFiles.attaChakki,
+  brochureFilename: "Smart_Buddy_Atta_Chakki.pdf",
+  downloads: [
+    {
+      label: "Atta Chakki brochure",
+      url: brochureFiles.attaChakki,
+      filename: "Smart_Buddy_Atta_Chakki.pdf",
+    },
+  ],
+  quoteText: "Inquire today with your hourly production target for the right Atta Chakki configuration.",
+};
+
+const vegetableCutter = {
+  slug: "vegetable-cutter",
+  title: "Vegetable Cutter",
+  navLabel: "Vegetable Cutter",
+  subtitle: "High-speed multi-function commercial vegetable cutting and slicing machines",
+  summary:
+    "Versatile industrial Vegetable Cutters equipped with interchangeable stainless steel blades for slicing, dicing, shredding, and julienne cuts. Dramatically cuts prep time in hotel kitchens, catering operations, and food processing plants.",
+  image: "/images/product-catalog/vegetable-cutter.png",
+  imageAlt: "Vegetable Cutter",
+  galleryImages: [
+    { src: "/images/product-catalog/vegetable-cutter.png", alt: "Vegetable Cutter" },
+  ],
+  heroPoints: [
+    "High processing speed capable of slicing and chopping 100 kg to 500 kg vegetables per hour",
+    "Complete set of interchangeable SS blades: Slicing, Dicing, Shredding, Grating & French Fry",
+    "Dual feed hopper: Wide hopper for round vegetables and cylindrical tube for long veggies",
+    "Food-grade aluminum alloy and Stainless Steel 304 construction for complete hygiene",
+    "Magnetic safety cut-off switch prevents blade rotation when the hopper cover is lifted",
+  ],
+  infoCards: [
+    { type: "features", title: "Multi-Blade Versatility", text: "Prepares onions, potatoes, cabbage, carrots, tomatoes, and leafy greens in seconds." },
+    { type: "applications", title: "Where It Can Be Installed", text: "Hotel kitchens, catering setups, cloud kitchens, school canteens, and food packaging factories." },
+    { type: "benefits", title: "Saves 80% Prep Time", text: "Drastically minimizes kitchen prep hours and labor costs while maintaining uniform cut size." },
+    { type: "customization", title: "Blade Variations", text: "Blade thickness adjustments from 1mm wafer slices to 10mm hearty dices." },
+  ],
+  specifications: [
+    { label: "Output Capacity", value: "100 kg/hr, 200 kg/hr, 300 kg/hr up to 500 kg/hr" },
+    { label: "Blades Included", value: "Stainless Steel Slicer (2mm, 4mm), Dicer (8mm, 10mm), Shredder (3mm, 5mm)" },
+    { label: "Motor", value: "0.75 HP to 2 HP Pure Copper Motor with high-torque gear drive" },
+    { label: "Body Build", value: "Anodized aluminum alloy body with food-grade SS 304 contact parts" },
+    { label: "Safety Controls", value: "No-volt release switch, thermal overload protection, and magnetic lid interlock" },
+  ],
+  technicalDetails: [
+    "Tool-less blade changing mechanism enables chefs to switch blade discs in under 30 seconds.",
+    "Angled discharge chute feeds cut produce cleanly into standard gastronorm (GN) pans.",
+    "Waterproof IP55 push buttons ensure operator safety even with wet hands in busy prep areas.",
+  ],
+  brochureUrl: brochureFiles.vegetableCutter,
+  brochureFilename: "Smart_Buddy_Vegetable_Cutter.pdf",
+  downloads: [
+    {
+      label: "Vegetable Cutter brochure",
+      url: brochureFiles.vegetableCutter,
+      filename: "Smart_Buddy_Vegetable_Cutter.pdf",
+    },
+  ],
+  quoteText: "Contact our team to explore blade configurations and commercial vegetable cutter models.",
+};
+
 export const productPages = {
   "electronic-eco-toilet": electronicEcoToilet,
 
@@ -769,6 +1374,18 @@ export const productPages = {
   "vending-machines": vendingMachines,
   "sanitary-vending-machine": sanitaryVendingMachine,
   "food-vending-machine": foodVendingMachine,
+  "steel-porta-cabin": steelPortaCabin,
+  "traffic-police-booths": trafficPoliceBooths,
+  "portable-toilet": portableToilet,
+  "modular-toilet": modularToilet,
+  "solid-waste-composter": solidWasteComposter,
+  "platform-trolley": platformTrolley,
+  "stainless-steel-shelf-rack": stainlessSteelShelfRack,
+  "kitchen-storage-racks": kitchenStorageRacks,
+  "heavy-duty-storage-racks": heavyDutyStorageRacks,
+  "dough-kneader": doughKneader,
+  "atta-chakki": attaChakki,
+  "vegetable-cutter": vegetableCutter,
 };
 
 export const productPageList = [
@@ -778,4 +1395,13 @@ export const productPageList = [
   petBottleShredder,
   computerKiosk,
   vendingMachines,
+  steelPortaCabin,
+  trafficPoliceBooths,
+  portableToilet,
+  modularToilet,
+  solidWasteComposter,
+  platformTrolley,
+  stainlessSteelShelfRack,
+  kitchenStorageRacks,
+  heavyDutyStorageRacks,
 ];

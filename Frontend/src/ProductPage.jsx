@@ -43,9 +43,17 @@ const concreteSanitation = [
   "pet-bottle-shredder",
 ];
 
+const concreteKitchen = [
+  "kitchen-storage-racks",
+  "dough-kneader",
+  "atta-chakki",
+  "vegetable-cutter",
+];
+
 const kioskSlugs = [...concreteKiosks, "computer-kiosk"];
 const vendingSlugs = [...concreteVending, "vending-machines"];
 const sanitationSlugs = concreteSanitation;
+const kitchenSlugs = concreteKitchen;
 
 const getDownloadItem = (item) => {
   if (typeof item === "string") {
@@ -65,6 +73,7 @@ function ProductPage({ product, onNavigateHome, onNavigateProduct }) {
   const isKiosk = kioskSlugs.includes(product.slug);
   const isVending = vendingSlugs.includes(product.slug);
   const isSanitation = sanitationSlugs.includes(product.slug);
+  const isKitchen = kitchenSlugs.includes(product.slug);
 
   const otherProducts = useMemo(() => {
     let relatedSlugs = [];
@@ -84,6 +93,8 @@ function ProductPage({ product, onNavigateHome, onNavigateProduct }) {
       ];
     } else if (isSanitation) {
       relatedSlugs = concreteSanitation.filter((slug) => slug !== product.slug);
+    } else if (isKitchen) {
+      relatedSlugs = concreteKitchen.filter((slug) => slug !== product.slug);
     } else {
       relatedSlugs = productPageList.map((item) => item.slug).filter((slug) => slug !== product.slug);
     }
@@ -93,14 +104,15 @@ function ProductPage({ product, onNavigateHome, onNavigateProduct }) {
       .filter((slug) => slug !== product.slug)
       .slice(0, 3);
     return uniqueSlugs.map((slug) => productPages[slug]).filter(Boolean);
-  }, [product.slug, isKiosk, isVending, isSanitation]);
+  }, [product.slug, isKiosk, isVending, isSanitation, isKitchen]);
 
   const relatedHeading = useMemo(() => {
     if (isVending) return "Other Vending & Kiosk Solutions";
     if (isKiosk) return "Other Kiosk Solutions";
     if (isSanitation) return "Other Sanitation & Waste Solutions";
+    if (isKitchen) return "Other Kitchen & Food Processing Equipment";
     return "Other Product Categories";
-  }, [isKiosk, isVending, isSanitation]);
+  }, [isKiosk, isVending, isSanitation, isKitchen]);
 
   useEffect(() => {
     setActiveImage(galleryImages[0]);
@@ -154,18 +166,20 @@ function ProductPage({ product, onNavigateHome, onNavigateProduct }) {
               ))}
             </ul>
             <div className="product-category-actions">
-              {!product.hideBrochure && (
-                product.brochureUrl ? (
-                  <a className="button primary" href={product.brochureUrl} download={product.brochureFilename}>
-                    <Download size={17} /> Download Brochure
-                  </a>
-                ) : (
-                  <button className="button primary" type="button" onClick={() => onNavigateHome("contact")}>
-                    <Download size={17} /> Download Brochure
-                  </button>
-                )
+              {product.slug === "electronic-eco-toilet" && (
+                <a
+                  className="button primary"
+                  href={product.brochureUrl || "/brochures/Smart_Buddy_Electronic_ECO_Toilet.pdf"}
+                  download={product.brochureFilename || "Smart_Buddy_Electronic_ECO_Toilet.pdf"}
+                >
+                  <Download size={17} /> Download Brochure
+                </a>
               )}
-              <button className="button outline-dark" type="button" onClick={() => onNavigateHome("contact")}>
+              <button
+                className={`button ${product.slug === "electronic-eco-toilet" ? "outline-dark" : "primary"}`}
+                type="button"
+                onClick={() => onNavigateHome("contact")}
+              >
                 Enquire Now
               </button>
             </div>

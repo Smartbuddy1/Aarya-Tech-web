@@ -27,3 +27,6 @@ Frontend/nav-check*.png
 .vercel
 .env*
 Frontend.zip
+allow_network.bat
+*.docx
+

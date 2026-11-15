@@ -7,7 +7,7 @@ import ReactMarkdown from 'react-markdown';
 // Initialize Gemini API
 const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
-const SYSTEM_PROMPT = `You are the official customer support AI for AARYA INNOVTECH PVT. LTD. (OEM manufacturer established in 2010, based in Nashik, Maharashtra).
+const SYSTEM_PROMPT = `You are the official customer support AI for AARYA INNOVTECH PVT. LTD. (OEM manufacturer established in 2019, based in Nashik, Maharashtra).
 Your sole purpose is to provide accurate information about Aarya Innovtech, its website, products, technical specifications, kiosks, vending machines, waste management solutions, services, clients, careers, achievements, and contact details.
 
 ============================================================
@@ -96,7 +96,7 @@ const FALLBACK_TOPICS = [
     ],
     responseEn: `Hello! 👋 Welcome to **AARYA INNOVTECH PVT. LTD.** 🏢
 
-We are an OEM manufacturing company established in 2010 based in Nashik, Maharashtra, specializing in smart public automation, sanitation, and sustainable waste management solutions.
+We are an OEM manufacturing company established in 2019 based in Nashik, Maharashtra, specializing in smart public automation, sanitation, and sustainable waste management solutions.
 
 🌟 **Our Key Solutions & Products:**
 • 🖥️ **Interactive Kiosks**: Computer Kiosks, Ticket Kiosks, Health Kiosks, Water ATM Kiosks, Printing Kiosks, Food Kiosks
@@ -107,7 +107,7 @@ We are an OEM manufacturing company established in 2010 based in Nashik, Maharas
 How may I assist you today? Feel free to ask for product specifications, pricing, or company details!`,
     responseMr: `नमस्कार! 🙏 **आर्या इनोव्हटेक प्रायव्हेट लिमिटेड (AARYA INNOVTECH PVT. LTD.)** मध्ये आपले सहर्ष स्वागत आहे! 🏢
 
-आम्ही २०१० पासून नाशिक, महाराष्ट्र येथे कार्यरत अग्रगण्य OEM मॅन्युफॅक्चरिंग कंपनी असून, स्मार्ट पब्लिक ऑटोमेशन, स्वच्छता तंत्रज्ञान आणि पर्यावरणपूरक कचरा व्यवस्थापनात तज्ज्ञ आहोत.
+आम्ही २०१९ पासून नाशिक, महाराष्ट्र येथे कार्यरत अग्रगण्य OEM मॅन्युफॅक्चरिंग कंपनी असून, स्मार्ट पब्लिक ऑटोमेशन, स्वच्छता तंत्रज्ञान आणि पर्यावरणपूरक कचरा व्यवस्थापनात तज्ज्ञ आहोत.
 
 🌟 **आमची प्रमुख उत्पादने व सेवा:**
 • 🖥️ **स्मार्ट कियोस्क**: कॉम्प्युटर, तिकीट, हेल्थ, वॉटर एटीएम, प्रिंटिंग आणि फूड कियोस्क
@@ -153,7 +153,7 @@ How may I assist you today? Feel free to ask for product specifications, pricing
     ],
     responseEn: `Our company name is **AARYA INNOVTECH PVT. LTD.** 🏢
 
-We are an OEM engineering and manufacturing company established in 2010 based in Nashik, Maharashtra.
+We are an OEM engineering and manufacturing company established in 2019 based in Nashik, Maharashtra.
 
 🌟 **Our Key Solutions:**
 • 🖥️ **Interactive Kiosks** (Computer, Ticket, Health, Water ATM, Printing, Food)
@@ -164,7 +164,7 @@ We are an OEM engineering and manufacturing company established in 2010 based in
 How can I help you today?`,
     responseMr: `आमच्या कंपनीचे नाव **आर्या इनोव्हटेक प्रायव्हेट लिमिटेड (AARYA INNOVTECH PVT. LTD.)** आहे. 🏢
 
-आम्ही २०१० पासून नाशिक, महाराष्ट्र येथे कार्यरत अग्रगण्य OEM मॅन्युफॅक्चरिंग कंपनी आहोत.
+आम्ही २०१९ पासून नाशिक, महाराष्ट्र येथे कार्यरत अग्रगण्य OEM मॅन्युफॅक्चरिंग कंपनी आहोत.
 
 🌟 **आमची प्रमुख उत्पादने:**
 • 🖥️ **इंटरॅक्टिव्ह कियोस्क** (कॉम्प्युटर, तिकीट, हेल्थ, वॉटर एटीएम, प्रिंटिंग, फूड)
@@ -185,7 +185,7 @@ How can I help you today?`,
 
 • **Company**: Aarya Innovtech Pvt. Ltd. (Brand: **SMART BUDDY**)
 • **Leadership**: The company is led by a veteran Engineering Director bringing over **16+ years of specialized experience** in industrial automation, special purpose machines, and sustainable hygiene engineering.
-• **Establishment**: Founded in 2010 in Nashik, Maharashtra as a pioneering indigenous OEM manufacturer.
+• **Establishment**: Founded in 2019 in Nashik, Maharashtra as a pioneering indigenous OEM manufacturer.
 • **Corporate Office**: 4A, Sayali Darshan A, Radha Nagar, Makhamalabad Road, Panchavati, Nashik - 422003
 • **Factory**: S-27, Near Emerson, Ambad MIDC, Nashik, Maharashtra - 422010
 
@@ -194,7 +194,7 @@ For executive inquiries, please contact **sales@aaryainnovtech.com** or call **+
 
 • **कंपनी**: आर्या इनोव्हटेक प्रायव्हेट लिमिटेड (ब्रँड: **SMART BUDDY**)
 • **संचालक व नेतृत्व (Director)**: कंपनीचे नेतृत्व इंडस्ट्रियल ऑटोमेशन आणि हायजिन उत्पादने क्षेत्रातील **१६+ वर्षांपेक्षा जास्त अनुभव** असणाऱ्या तज्ज्ञ संचालकांकडे आहे.
-• **स्थापना**: २०१० पासून नाशिक, महाराष्ट्र येथे अग्रगण्य OEM उत्पादक म्हणून कार्यरत.
+• **स्थापना**: २०१९ पासून नाशिक, महाराष्ट्र येथे अग्रगण्य OEM उत्पादक म्हणून कार्यरत.
 • **कार्यालय**: ४ए, सायली दर्शन ए, राधा नगर, मखमलाबाद रोड, पंचवटी, नाशिक - ४२२००३
 • **फॅक्टरी**: एस-२७, एमर्सन जवळ, अंबड एमआयडीसी, नाशिक, महाराष्ट्र - ४२२०१०
 
@@ -214,7 +214,7 @@ For executive inquiries, please contact **sales@aaryainnovtech.com** or call **+
     ],
     responseEn: `🏢 **About Aarya Innovtech Pvt. Ltd.**:
 
-Established in 2010 in Nashik, Maharashtra, **Aarya Innovtech** is an ISO 9001:2015 certified OEM technology manufacturer delivering smart sanitation, automated waste recycling, and interactive hardware solutions across India.
+Established in 2019 in Nashik, Maharashtra, **Aarya Innovtech** is an ISO 9001:2015 certified OEM technology manufacturer delivering smart sanitation, automated waste recycling, and interactive hardware solutions across India.
 
 🌟 **Core Domains:**
 1. **Interactive Kiosks**: Custom touchscreen terminals for e-governance, healthcare, ticketing, and retail.
@@ -225,7 +225,7 @@ Established in 2010 in Nashik, Maharashtra, **Aarya Innovtech** is an ISO 9001:2
 📍 **Offices**: Head Office in Panchavati, Nashik | Manufacturing Plant in Ambad MIDC, Nashik.`,
     responseMr: `🏢 **आर्या इनोव्हटेक प्रायव्हेट लिमिटेड बद्दल माहिती**:
 
-२०१० मध्ये नाशिक, महाराष्ट्र येथे स्थापन झालेली **आर्या इनोव्हटेक** ही आयएसओ (ISO 9001:2015) प्रमाणित अग्रगण्य मॅन्युफॅक्चरिंग कंपनी आहे.
+२०१९ मध्ये नाशिक, महाराष्ट्र येथे स्थापन झालेली **आर्या इनोव्हटेक** ही आयएसओ (ISO 9001:2015) प्रमाणित अग्रगण्य मॅन्युफॅक्चरिंग कंपनी आहे.
 
 🌟 **मुख्य कार्यक्षेत्रे:**
 १. **इंटरॅक्टिव्ह कियोस्क**: ई-गव्हर्नन्स, टेलिमेडिसिन, तिकीट व फूड सेल्फ-सर्व्हिस स्टेशन्स.

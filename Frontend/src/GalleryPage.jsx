@@ -4,7 +4,9 @@ import {
   ArrowRight,
   Building2,
   Camera,
+  ExternalLink,
   Globe2,
+  Linkedin,
   PlayCircle,
   Trophy,
   Users,
@@ -130,6 +132,34 @@ const rawGallerySections = [
     ],
   },
   {
+    id: "student-mentorship",
+    eyebrow: "Student mentorship & connect",
+    title: "Youth mentorship and interaction",
+    summary: "Inspiring future innovators and engineering students through hands-on guidance, industry advice, and knowledge sharing.",
+    icon: Users,
+    testimonial: {
+      quote: "Hello Sir! I'm srushti Gosavi. It was a pleasure meeting you unexpectedly and having such a wonderful conversation. We really appreciate the valuable advice and insights you shared with us. It was a great learning experience",
+      author: "Srushti Gosavi",
+      role: "Engineering Student",
+      platform: "LinkedIn",
+      link: "https://lnkd.in/p/dV6KDiX4",
+    },
+    images: [
+      {
+        id: "student-mentorship-interaction",
+        src: galleryPath("student-mentorship", "student-mentorship-interaction.jpg"),
+        title: "Student Mentorship Interaction",
+        alt: "Aarya Innovtech leadership with student group during mentorship interaction",
+        size: "portrait",
+        width: 768,
+        height: 1024,
+        quote: "Hello Sir! I'm srushti Gosavi. It was a pleasure meeting you unexpectedly and having such a wonderful conversation. We really appreciate the valuable advice and insights you shared with us. It was a great learning experience",
+        author: "Srushti Gosavi (via LinkedIn)",
+        link: "https://lnkd.in/p/dV6KDiX4",
+      },
+    ],
+  },
+  {
     id: "moonje-institute",
     eyebrow: "Mentorship and institute connect",
     title: "Dr. Moonje Institute interaction",
@@ -202,10 +232,10 @@ const gallerySections = rawGallerySections.map((section) => ({
 }));
 
 const galleryHeroImages = deduplicateImages([
-  { ...gallerySections[1].images[0], category: gallerySections[1].eyebrow },
-  { ...gallerySections[2].images[0], category: gallerySections[2].eyebrow },
-  { ...gallerySections[4].images[0], category: gallerySections[4].eyebrow },
-]);
+  gallerySections[1]?.images?.[0] ? { ...gallerySections[1].images[0], category: gallerySections[1].eyebrow } : null,
+  gallerySections[2]?.images?.[0] ? { ...gallerySections[2].images[0], category: gallerySections[2].eyebrow } : null,
+  gallerySections[4]?.images?.[0] ? { ...gallerySections[4].images[0], category: gallerySections[4].eyebrow } : null,
+].filter(Boolean));
 
 function GalleryPage({ onNavigateHome, onOpenMedia }) {
   const openMedia = (image) => {
@@ -216,6 +246,9 @@ function GalleryPage({ onNavigateHome, onOpenMedia }) {
       alt: image.alt,
       type: image.type,
       poster: image.poster,
+      quote: image.quote,
+      author: image.author,
+      link: image.link,
     });
   };
 
@@ -252,7 +285,7 @@ function GalleryPage({ onNavigateHome, onOpenMedia }) {
             </div>
             <div className="gallery-page-summary" aria-label="Gallery summary">
               <span><strong>{gallerySections.length}</strong> sections</span>
-              <span><strong>2010+</strong> journey</span>
+              <span><strong>2019+</strong> journey</span>
             </div>
           </div>
 
@@ -306,7 +339,7 @@ function GalleryPage({ onNavigateHome, onOpenMedia }) {
                     </div>
                   </div>
 
-                  <div className={`gallery-page-grid ${sectionImages.length === 1 ? "is-single" : ""}`} data-reveal>
+                  <div className={`gallery-page-grid ${sectionImages.length === 1 && !section.testimonial ? "is-single" : ""} ${section.testimonial ? "has-testimonial" : ""}`} data-reveal>
                     {sectionImages.map((image, imageIndex) => (
                       <button
                         className={`gallery-page-card is-${image.size || "standard"}`}
@@ -337,6 +370,33 @@ function GalleryPage({ onNavigateHome, onOpenMedia }) {
                         </span>
                       </button>
                     ))}
+
+                    {section.testimonial && (
+                      <div className="gallery-testimonial-card" data-reveal>
+                        <div className="gallery-testimonial-badge">
+                          <Linkedin size={15} />
+                          <span>Posted on LinkedIn</span>
+                        </div>
+                        <blockquote className="gallery-testimonial-quote">
+                          &ldquo;{section.testimonial.quote}&rdquo;
+                        </blockquote>
+                        <div className="gallery-testimonial-footer">
+                          <div className="gallery-testimonial-author">
+                            <strong>{section.testimonial.author}</strong>
+                            <span>{section.testimonial.role}</span>
+                          </div>
+                          <a
+                            href={section.testimonial.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="gallery-testimonial-link-btn"
+                          >
+                            <span>View on LinkedIn</span>
+                            <ExternalLink size={14} />
+                          </a>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
