@@ -28,6 +28,7 @@ const brochureFiles = {
   doughKneader: brochurePdf("dough-kneader.pdf"),
   attaChakki: brochurePdf("atta-chakki.pdf"),
   vegetableCutter: brochurePdf("vegetable-cutter.pdf"),
+  pulverizer: brochurePdf("pulverizer.pdf"),
 };
 
 const commonPublicSites = ["Highways", "Malls", "Airports", "Railway Stations", "Tourist Places", "Smart City"];
@@ -1117,6 +1118,7 @@ const kitchenStorageRacks = {
     { title: "Dough Kneader", slug: "dough-kneader" },
     { title: "Atta Chakki", slug: "atta-chakki" },
     { title: "Vegetable Cutter", slug: "vegetable-cutter" },
+    { title: "Pulverizer", slug: "pulverizer" },
   ],
   subtitle: "Commercial kitchen organizer racks, food preparation & storage systems",
   summary:
@@ -1359,6 +1361,56 @@ const vegetableCutter = {
   quoteText: "Contact our team to explore blade configurations and commercial vegetable cutter models.",
 };
 
+const pulverizer = {
+  slug: "pulverizer",
+  title: "Pulverizer",
+  navLabel: "Pulverizer",
+  subtitle: "Heavy-duty commercial & industrial impact grinding pulverizer machines",
+  summary:
+    "Industrial-grade Pulverizers engineered for high-throughput, ultra-fine grinding of grains, spices, pulses, herbs, and dry ingredients. Built with dynamic high-speed hammer beaters, interchangeable mesh sieves, cyclone collection, and vibration-damped heavy steel construction.",
+  image: "/images/product-catalog/pulverizer.png",
+  imageAlt: "Pulverizer",
+  galleryImages: [
+    { src: "/images/product-catalog/pulverizer.png", alt: "Pulverizer" },
+  ],
+  heroPoints: [
+    "High-speed impact grinding suitable for wheat, spices, chilli, turmeric, pulses, and dry food ingredients",
+    "Heavy-duty manganese steel / hardened alloy hammer beaters for long operational life",
+    "Interchangeable sizing screens (sieves) from 20 mesh to 100+ mesh for custom powder fineness",
+    "Cyclone separator and dust collection bag system ensure clean, loss-free discharge",
+    "Heavy-duty copper-wound motor with balanced rotor shaft minimizing operational vibration",
+  ],
+  infoCards: [
+    { type: "features", title: "Impact Micro-Grinding", text: "Delivers uniform, fine powder consistency with minimal heat buildup to protect natural color and aroma." },
+    { type: "applications", title: "Where It Can Be Installed", text: "Commercial spice processing units, food manufacturing plants, grain flour mills, ayurvedic medicine production, and bulk commercial kitchens." },
+    { type: "benefits", title: "Continuous High Output", text: "Heavy-duty construction supports non-stop multi-shift operation with rapid hourly processing throughput." },
+    { type: "customization", title: "Capacity Options", text: "Available in 2 HP, 3 HP, 5 HP, 7.5 HP, 10 HP up to 25+ HP industrial processing capacities." },
+  ],
+  specifications: [
+    { label: "Production Output", value: "30 kg/hr, 50 kg/hr, 100 kg/hr up to 500 kg/hr" },
+    { label: "Motor Power", value: "2 HP to 25 HP Heavy-duty 3-Phase / 1-Phase Copper Motor" },
+    { label: "Grinding Mechanism", value: "High-Speed Dynamic Rotor with Hardened Steel Beaters / Cutters" },
+    { label: "Screen Sizes", value: "Interchangeable Stainless Steel Sieves (20, 40, 60, 80, 100 mesh)" },
+    { label: "Contact Parts", value: "Stainless Steel AISI 304 / Hardened Alloy Steel" },
+    { label: "Discharge System", value: "Bottom gravity discharge / Cyclone dust collection collector" },
+  ],
+  technicalDetails: [
+    "Precision dynamically balanced rotor shaft prevents machine vibrations and extends bearing life.",
+    "Dual-hopper feed control with magnetic trap prevents foreign metal contaminants from entering the chamber.",
+    "Water-cooled or air-cooled chamber options available for heat-sensitive spice and chemical grinding.",
+  ],
+  brochureUrl: brochureFiles.pulverizer,
+  brochureFilename: "Smart_Buddy_Pulverizer.pdf",
+  downloads: [
+    {
+      label: "Pulverizer brochure",
+      url: brochureFiles.pulverizer,
+      filename: "Smart_Buddy_Pulverizer.pdf",
+    },
+  ],
+  quoteText: "Contact our engineering team with your raw material type and hourly output target for custom pulverizer recommendations.",
+};
+
 export const productPages = {
   "electronic-eco-toilet": electronicEcoToilet,
 
@@ -1386,6 +1438,7 @@ export const productPages = {
   "dough-kneader": doughKneader,
   "atta-chakki": attaChakki,
   "vegetable-cutter": vegetableCutter,
+  "pulverizer": pulverizer,
 };
 
 export const productPageList = [

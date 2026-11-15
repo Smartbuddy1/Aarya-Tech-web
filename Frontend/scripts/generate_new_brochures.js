@@ -549,6 +549,50 @@ const newBrochureData = [
       'Frozen & Dehydrated Food Units',
       'Vegetable Mandi Pre-Pack Centers'
     ]
+  },
+  {
+    filename: 'pulverizer.pdf',
+    productTitle: 'SMART BUDDY PULVERIZER',
+    modelCode: 'SB-PV-50 / 200 Series',
+    category: 'IMPACT GRINDING & PULVERIZING MACHINERY',
+    subtitle: 'Heavy-Duty Commercial & Industrial Impact Grinding Pulverizer Machines',
+    summary:
+      'The Smart Buddy Commercial Pulverizer by Aarya Innovtech is an industrial-grade impact grinding mill engineered for high-throughput, ultra-fine powdering of spices, grains, herbs, and food ingredients. Equipped with hardened steel beaters, interchangeable grading screens, and cyclone dust collection, it delivers cool, uniform micro-grinding with maximum production efficiency.',
+    imagePath: path.resolve(publicDir, 'images/product-catalog/pulverizer.png'),
+    highlights: [
+      'High-speed impact grinding suitable for wheat, spices, chilli, turmeric, pulses, and herbs.',
+      'Hardened manganese alloy steel hammer beaters engineered for extended operational life.',
+      'Interchangeable mesh screens (20 to 100+ mesh) allow precision powder fineness regulation.',
+      'Cyclone separator and dust collection bag ensure loss-free, hygienic material handling.',
+      'Heavy-duty copper-wound motor with dynamically balanced rotor prevents machine vibration.',
+      'Dual-hopper feed control with magnetic trap prevents foreign metal contaminants from entering.'
+    ],
+    featureCards: [
+      { title: 'Ultra-Fine Grinding', text: 'Produces uniform micro-powder consistency while minimizing heat generation to protect flavor.' },
+      { title: 'Continuous Output', text: 'Heavy-duty construction supports uninterrupted multi-shift operation for commercial milling.' },
+      { title: 'Interchangeable Sieves', text: 'Quick-change sizing screens from coarse 20 mesh to ultra-fine 100+ mesh powder.' },
+      { title: 'Cyclone Dust Control', text: 'Integrated cyclone separator and filter bag prevent dust escape in the processing area.' }
+    ],
+    specs: [
+      { label: 'Grinding Output', value: '30 kg/hr, 50 kg/hr, 100 kg/hr up to 500 kg/hr' },
+      { label: 'Motor Power', value: '2 HP, 3 HP, 5 HP, 7.5 HP, 10 HP up to 25 HP Copper Induction Motor' },
+      { label: 'Grinding Chamber', value: 'Dynamically Balanced Rotor with Hardened Steel Beaters / Cutters' },
+      { label: 'Mesh Sieves', value: 'Stainless Steel Sizing Screens (20, 40, 60, 80, 100 mesh)' },
+      { label: 'Contact Parts', value: 'Food-Grade Stainless Steel SS 304 / Alloy Steel' }
+    ],
+    techDetails: [
+      'Precision dynamically balanced rotor shaft prevents machine vibrations and extends bearing life.',
+      'Water-jacketed or air-cooled chamber options available for heat-sensitive spice grinding.',
+      'Tool-less sieve changing system allows operators to swap screen meshes in minutes.'
+    ],
+    applications: [
+      'Commercial Spice Processing Units',
+      'Food & Flour Manufacturing Plants',
+      'Ayurvedic & Herbal Processing',
+      'Grain & Pulse Grinding Mills',
+      'Chemical & Mineral Micro-Grinding',
+      'Bulk Commercial Kitchens & Catering'
+    ]
   }
 ];
 

@@ -462,7 +462,7 @@ const products = [
   {
     title: "Kitchen Equipment",
     short: "Commercial kitchen organizer racks, food preparation & storage systems.",
-    text: "Complete range of commercial kitchen storage racks and food processing equipment including heavy-duty SS racks, dough kneaders, atta chakki, and vegetable cutters.",
+    text: "Complete range of commercial kitchen storage racks and food processing equipment including heavy-duty SS racks, dough kneaders, atta chakki, vegetable cutters, and pulverizers.",
     icon: Store,
     tag: "Commercial kitchen",
     accent: "teal",

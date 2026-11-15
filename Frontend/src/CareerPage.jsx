@@ -43,7 +43,8 @@ const departmentPositions = {
     "Software Tester",
     "Software Developer",
   ],
-  "Sales": [
+  "Sales & Marketing": [
+    "Sales & Marketing Executive",
     "Sales Executive",
   ],
   "Quality": [
@@ -406,7 +407,38 @@ function CareerPage({ onNavigateHome }) {
                   </button>
                 </div>
 
-                {/* Card 5: Talent Network / Open Application */}
+                {/* Card 5: Sales & Marketing Executive */}
+                <div className="career-vacancy-box">
+                  <div className="career-vacancy-top">
+                    <div className="career-vacancy-title-wrap">
+                      <span className="career-vacancy-dept-badge">Sales &amp; Marketing</span>
+                      <h4>Sales &amp; Marketing Executive</h4>
+                    </div>
+                    <div className="career-vacancy-tags">
+                      <span><MapPin size={13} /> Ambad MIDC, Nashik</span>
+                      <span><Clock size={13} /> Full-Time</span>
+                      <span><BriefcaseBusiness size={13} /> Fresher</span>
+                    </div>
+                  </div>
+                  <p className="career-vacancy-desc">
+                    Drive client outreach, customer communication, lead generation, and business development for our smart civic technology and hygiene product lines.
+                  </p>
+                  <ul className="career-vacancy-points">
+                    <li><strong>Experience:</strong> Fresher</li>
+                    <li><strong>Qualification:</strong> Graduate / MBA (Marketing Preferred)</li>
+                    <li><strong>Gender:</strong> Male</li>
+                    <li><strong>Skills:</strong> Communication, Customer Handling, Lead Generation, Business Development</li>
+                  </ul>
+                  <button
+                    type="button"
+                    className="button primary small career-vacancy-apply-btn"
+                    onClick={() => handleApplyClick("Sales & Marketing", "Sales & Marketing Executive")}
+                  >
+                    Apply Now <ArrowRight size={15} />
+                  </button>
+                </div>
+
+                {/* Talent Network / Open Application */}
                 <div className="career-talent-pool-card" style={{
                   gridColumn: "1 / -1",
                   marginTop: "8px",
