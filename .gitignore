@@ -30,3 +30,7 @@ Frontend.zip
 allow_network.bat
 *.docx
 
+
+scratch/
+*.backup
+

@@ -85,14 +85,6 @@ const isAllowedResumeFile = (file) => {
   return hasAllowedExtension && hasAllowedMimeType && file.size <= maxResumeSizeBytes;
 };
 
-const fileToBase64 = (file) =>
-  new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(String(reader.result || "").split(",")[1] || "");
-    reader.onerror = () => reject(reader.error);
-    reader.readAsDataURL(file);
-  });
-
 function CareerPage({ onNavigateHome }) {
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [selectedPosition, setSelectedPosition] = useState("");
@@ -118,7 +110,7 @@ function CareerPage({ onNavigateHome }) {
     setSelectedDepartment(dept);
     setSelectedPosition(pos);
     setIsFormVisible(true);
-    
+
     setTimeout(() => {
       if (formRef.current) {
         formRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -149,12 +141,15 @@ function CareerPage({ onNavigateHome }) {
     setResumeError("");
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     if (submitLocked) return;
 
     const currentForm = event.currentTarget;
     const form = new FormData(currentForm);
+    const companyWebsite = String(form.get("companyWebsite") || "").trim();
+    if (companyWebsite) return;
+
     const resume = form.get("resume");
     if (!(resume instanceof File) || !isAllowedResumeFile(resume)) {
       setResumeError("Upload a PDF, DOC, or DOCX resume under 10 MB.");
@@ -164,52 +159,41 @@ function CareerPage({ onNavigateHome }) {
     setSubmitLocked(true);
     window.clearTimeout(submitTimerRef.current);
 
-    try {
-      const attachmentContent = await fileToBase64(resume);
-      const dept = form.get("department") || selectedDepartment;
-      const pos = form.get("position") || selectedPosition;
+    const dept = String(form.get("department") || selectedDepartment || "").trim();
+    const pos = String(form.get("position") || selectedPosition || "").trim();
+    const name = String(form.get("name") || "").trim();
+    const email = String(form.get("email") || "").trim();
+    const phone = String(form.get("phone") || "").trim();
+    const experience = String(form.get("experience") || "").trim();
+    const city = String(form.get("city") || "").trim();
+    const message = String(form.get("message") || "").trim();
 
-      const response = await fetch("https://aaryainnovtech1.vercel.app/api/send-mail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          type: "career",
-          role: `${dept} - ${pos}`,
-          department: dept,
-          position: pos,
-          name: form.get("name"),
-          email: form.get("email"),
-          phone: form.get("phone"),
-          experience: form.get("experience"),
-          city: form.get("city"),
-          message: form.get("message"),
-          companyWebsite: form.get("companyWebsite"),
-          formStartedAt: Number(form.get("formStartedAt") || 0),
-          attachment: {
-            filename: resume.name,
-            contentType: resume.type,
-            content: attachmentContent,
-          },
-        }),
-      });
+    const subject = encodeURIComponent(`Job Application: ${dept} - ${pos} (${name})`);
+    const body = encodeURIComponent(
+      [
+        `Department: ${dept}`,
+        `Position: ${pos}`,
+        `Name: ${name}`,
+        `Phone: ${phone}`,
+        `Email: ${email}`,
+        `Experience: ${experience}`,
+        `City: ${city}`,
+        `Selected Resume File: ${resume.name} (Please attach this file before sending)`,
+        message ? `\nMessage:\n${message}` : "",
+      ].filter(Boolean).join("\n")
+    );
 
-      if (!response.ok) {
-        throw new Error("Application email failed");
-      }
+    window.location.href = `mailto:aryaprotech@gmail.com?subject=${subject}&body=${body}`;
+    setSubmitted("sent");
+    setResumeName("");
+    setSelectedDepartment("");
+    setSelectedPosition("");
+    currentForm.reset();
 
-      setSubmitted("sent");
-      setResumeName("");
-      setSelectedDepartment("");
-      setSelectedPosition("");
-      currentForm.reset();
-    } catch {
-      setSubmitted("error");
-    } finally {
-      submitTimerRef.current = window.setTimeout(() => {
-        setSubmitLocked(false);
-        setSubmitted(false);
-      }, 5000);
-    }
+    submitTimerRef.current = window.setTimeout(() => {
+      setSubmitLocked(false);
+      setSubmitted(false);
+    }, 5000);
   };
 
   return (
@@ -492,151 +476,151 @@ function CareerPage({ onNavigateHome }) {
             {/* Bottom Section: Direct Apply Form */}
             {isFormVisible && (
               <form className="career-application-form" id="career-apply-form" ref={formRef} onSubmit={handleSubmit}>
-              <div className="form-trap" aria-hidden="true">
-                <label htmlFor="career-company-website">Company website</label>
-                <input id="career-company-website" name="companyWebsite" type="text" tabIndex={-1} autoComplete="off" />
-                <input name="formStartedAt" type="hidden" value={formLoadTime} readOnly />
-              </div>
+                <div className="form-trap" aria-hidden="true">
+                  <label htmlFor="career-company-website">Company website</label>
+                  <input id="career-company-website" name="companyWebsite" type="text" tabIndex={-1} autoComplete="off" />
+                  <input name="formStartedAt" type="hidden" value={formLoadTime} readOnly />
+                </div>
 
-              <div className="career-form-heading">
-                <span><Mail size={15} /> Job Application</span>
-                <h2>Apply Now</h2>
-                <p style={{ margin: "6px 0 0", color: "#60736d", fontSize: "14px" }}>
-                  Select your department and position, then fill in your details to apply.
-                </p>
-              </div>
+                <div className="career-form-heading">
+                  <span><Mail size={15} /> Job Application</span>
+                  <h2>Apply Now</h2>
+                  <p style={{ margin: "6px 0 0", color: "#60736d", fontSize: "14px" }}>
+                    Select your department and position, then fill in your details to apply.
+                  </p>
+                </div>
 
-              {/* Dynamic Department & Position Row */}
-              <div className="career-form-row">
-                <div>
-                  <label htmlFor="career-department">
-                    Select Department <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
-                  </label>
-                  <select
-                    id="career-department"
-                    name="department"
-                    value={selectedDepartment}
-                    onChange={(e) => {
-                      setSelectedDepartment(e.target.value);
-                      setSelectedPosition("");
-                    }}
-                    required
-                  >
-                    <option value="" disabled>Departments</option>
-                    {Object.keys(departmentPositions).map((dept) => (
-                      <option value={dept} key={dept}>{dept}</option>
-                    ))}
-                  </select>
+                {/* Dynamic Department & Position Row */}
+                <div className="career-form-row">
+                  <div>
+                    <label htmlFor="career-department">
+                      Select Department <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
+                    </label>
+                    <select
+                      id="career-department"
+                      name="department"
+                      value={selectedDepartment}
+                      onChange={(e) => {
+                        setSelectedDepartment(e.target.value);
+                        setSelectedPosition("");
+                      }}
+                      required
+                    >
+                      <option value="" disabled>Departments</option>
+                      {Object.keys(departmentPositions).map((dept) => (
+                        <option value={dept} key={dept}>{dept}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="career-position">
+                      Select Position <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
+                    </label>
+                    <select
+                      id="career-position"
+                      name="position"
+                      value={selectedPosition}
+                      onChange={(e) => setSelectedPosition(e.target.value)}
+                      disabled={!selectedDepartment}
+                      required
+                    >
+                      <option value="" disabled>
+                        {selectedDepartment ? `Positions in ${selectedDepartment}` : "Select Department First"}
+                      </option>
+                      {availablePositions.map((pos) => (
+                        <option value={pos} key={pos}>{pos}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <div className="career-form-row">
+                  <div>
+                    <label htmlFor="career-name">
+                      Full Name <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
+                    </label>
+                    <input id="career-name" name="name" type="text" placeholder="Your full name" maxLength={80} autoComplete="name" required />
+                  </div>
+                  <div>
+                    <label htmlFor="career-phone">
+                      Phone Number <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
+                    </label>
+                    <input
+                      id="career-phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="+91 98765 43210"
+                      minLength={5}
+                      maxLength={20}
+                      autoComplete="tel"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="career-form-row">
+                  <div>
+                    <label htmlFor="career-email">
+                      Email Address <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
+                    </label>
+                    <input id="career-email" name="email" type="email" placeholder="you@example.com" maxLength={120} autoComplete="email" required />
+                  </div>
+                  <div>
+                    <label htmlFor="career-experience">
+                      Total Experience <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
+                    </label>
+                    <input id="career-experience" name="experience" type="text" placeholder="e.g. Fresher / 2 Years" maxLength={40} required />
+                  </div>
                 </div>
 
                 <div>
-                  <label htmlFor="career-position">
-                    Select Position <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
+                  <label htmlFor="career-city">
+                    Current City / Location <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
                   </label>
-                  <select
-                    id="career-position"
-                    name="position"
-                    value={selectedPosition}
-                    onChange={(e) => setSelectedPosition(e.target.value)}
-                    disabled={!selectedDepartment}
-                    required
-                  >
-                    <option value="" disabled>
-                      {selectedDepartment ? `Positions in ${selectedDepartment}` : "Select Department First"}
-                    </option>
-                    {availablePositions.map((pos) => (
-                      <option value={pos} key={pos}>{pos}</option>
-                    ))}
-                  </select>
+                  <input id="career-city" name="city" type="text" placeholder="e.g. Nashik, Pune, Mumbai" maxLength={80} autoComplete="address-level2" required />
                 </div>
-              </div>
 
-              <div className="career-form-row">
                 <div>
-                  <label htmlFor="career-name">
-                    Full Name <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
+                  <label htmlFor="career-resume">
+                    Upload Resume <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
                   </label>
-                  <input id="career-name" name="name" type="text" placeholder="Your full name" maxLength={80} autoComplete="name" required />
+                  <label className="career-file-input" htmlFor="career-resume">
+                    <FileUp size={18} />
+                    <span>{resumeName || "Choose file (PDF, DOC, DOCX max 10MB)"}</span>
+                    <input
+                      id="career-resume"
+                      name="resume"
+                      type="file"
+                      accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                      onChange={handleResumeChange}
+                      aria-describedby={resumeError ? "career-resume-error" : undefined}
+                      required
+                    />
+                  </label>
+                  {resumeError && <p className="form-note error" id="career-resume-error">{resumeError}</p>}
                 </div>
+
                 <div>
-                  <label htmlFor="career-phone">
-                    Phone Number <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
-                  </label>
-                  <input
-                    id="career-phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="+91 98765 43210"
-                    minLength={5}
-                    maxLength={20}
-                    autoComplete="tel"
-                    required
-                  />
+                  <label htmlFor="career-message">Short Note / Message (Optional)</label>
+                  <textarea id="career-message" name="message" rows="3" placeholder="Tell us about yourself and your key skills..." maxLength={900} />
                 </div>
-              </div>
 
-              <div className="career-form-row">
-                <div>
-                  <label htmlFor="career-email">
-                    Email Address <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
-                  </label>
-                  <input id="career-email" name="email" type="email" placeholder="you@example.com" maxLength={120} autoComplete="email" required />
-                </div>
-                <div>
-                  <label htmlFor="career-experience">
-                    Total Experience <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
-                  </label>
-                  <input id="career-experience" name="experience" type="text" placeholder="e.g. Fresher / 2 Years" maxLength={40} required />
-                </div>
-              </div>
+                <button className="button primary" type="submit" disabled={submitLocked} style={{ width: "100%", justifyContent: "center", minHeight: "48px" }}>
+                  <Send size={17} /> {submitLocked ? "Sending Application..." : "Submit Application"}
+                </button>
 
-              <div>
-                <label htmlFor="career-city">
-                  Current City / Location <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
-                </label>
-                <input id="career-city" name="city" type="text" placeholder="e.g. Nashik, Pune, Mumbai" maxLength={80} autoComplete="address-level2" required />
-              </div>
-
-              <div>
-                <label htmlFor="career-resume">
-                  Upload Resume <span style={{ color: "#ef4444", fontWeight: "bold" }}>*</span>
-                </label>
-                <label className="career-file-input" htmlFor="career-resume">
-                  <FileUp size={18} />
-                  <span>{resumeName || "Choose file (PDF, DOC, DOCX max 10MB)"}</span>
-                  <input
-                    id="career-resume"
-                    name="resume"
-                    type="file"
-                    accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                    onChange={handleResumeChange}
-                    aria-describedby={resumeError ? "career-resume-error" : undefined}
-                    required
-                  />
-                </label>
-                {resumeError && <p className="form-note error" id="career-resume-error">{resumeError}</p>}
-              </div>
-
-              <div>
-                <label htmlFor="career-message">Short Note / Message (Optional)</label>
-                <textarea id="career-message" name="message" rows="3" placeholder="Tell us about yourself and your key skills..." maxLength={900} />
-              </div>
-
-              <button className="button primary" type="submit" disabled={submitLocked} style={{ width: "100%", justifyContent: "center", minHeight: "48px" }}>
-                <Send size={17} /> {submitLocked ? "Sending Application..." : "Submit Application"}
-              </button>
-
-              {submitted === "sent" && (
-                <div style={{ padding: "12px", background: "#f8fafc", border: "1px solid #86efac", borderRadius: "6px", color: "#111827", fontSize: "14px", fontWeight: "600", textAlign: "center" }}>
-                  ✅ Application submitted successfully! Our HR team will review your profile.
-                </div>
-              )}
-              {submitted === "error" && (
-                <div style={{ padding: "12px", background: "#fef2f2", border: "1px solid #fca5a5", borderRadius: "6px", color: "#991b1b", fontSize: "14px", fontWeight: "600", textAlign: "center" }}>
-                  ❌ Unable to send application right now. Please try again or email us directly at sales@theaaryatechnologies.com.
-                </div>
-              )}
-            </form>
+                {submitted === "sent" && (
+                  <div style={{ padding: "12px", background: "#f8fafc", border: "1px solid #86efac", borderRadius: "6px", color: "#111827", fontSize: "14px", fontWeight: "600", textAlign: "center" }}>
+                    ✅ Your email app has been opened with your application details. Please attach your resume and click send (or email aryaprotech@gmail.com).
+                  </div>
+                )}
+                {submitted === "error" && (
+                  <div style={{ padding: "12px", background: "#fef2f2", border: "1px solid #fca5a5", borderRadius: "6px", color: "#991b1b", fontSize: "14px", fontWeight: "600", textAlign: "center" }}>
+                    ❌ Unable to send application right now. Please try again or email us directly at aryaprotech@gmail.com.
+                  </div>
+                )}
+              </form>
             )}
           </div>
         </div>

@@ -14,7 +14,6 @@ import {
   Droplets,
   Facebook,
   Factory,
-  Instagram,
   Leaf,
   Linkedin,
   Mail,
@@ -1937,7 +1936,7 @@ function App() {
     setHeroIndex((current) => (current + direction + heroSlides.length) % heroSlides.length);
   };
 
-  const handleContact = async (event) => {
+  const handleContact = (event) => {
     event.preventDefault();
     if (mailStatus === "sending") return;
 
@@ -1947,29 +1946,19 @@ function App() {
     const phone = String(form.get("phone") || "").trim().slice(0, 16);
     const message = String(form.get("message") || "").trim().slice(0, 900);
     const website = String(form.get("website") || "").trim().slice(0, 200);
-    const formStartedAt = Number(form.get("formStartedAt") || 0);
 
-    setMailStatus("sending");
+    if (website) return;
+
+    const subject = encodeURIComponent(`Website Product Enquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nPhone: ${phone}\n\nMessage:\n${message}`
+    );
+
     window.clearTimeout(mailResetTimerRef.current);
-
-    try {
-      const response = await fetch("https://aaryainnovtech1.vercel.app/api/send-mail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "contact", name, phone, message, website, formStartedAt }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Email failed");
-      }
-
-      setMailStatus("sent");
-      currentForm.reset();
-    } catch {
-      setMailStatus("error");
-    } finally {
-      mailResetTimerRef.current = window.setTimeout(() => setMailStatus("idle"), 4500);
-    }
+    window.location.href = `mailto:aryaprotech@gmail.com?subject=${subject}&body=${body}`;
+    setMailStatus("sent");
+    currentForm.reset();
+    mailResetTimerRef.current = window.setTimeout(() => setMailStatus("idle"), 5000);
   };
 
   const getSEOProps = () => {
@@ -2631,11 +2620,6 @@ function App() {
                   <a href="https://in.linkedin.com/in/smart-buddy-818445190" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <Linkedin size={18} />
                   </a>
-
-                  <a href="https://www.instagram.com/aaryainnovtech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <Instagram size={18} />
-                  </a>
-
                 </div>
               </div>
             </div>
@@ -2708,18 +2692,17 @@ function App() {
                     <small>Sun - Fri: 09:00 AM - 06:00 PM</small>
                   </span>
                 </a>
-                <a className="footer-contact-item" href="mailto:sales@theaaryatechnologies.com">
+                <a className="footer-contact-item" href="mailto:aryaprotech@gmail.com">
                   <i><Mail size={21} /></i>
                   <span>
-                    <strong>sales@theaaryatechnologies.com</strong>
-                    <small>www.theaaryatechnologies.com</small>
+                    <strong>aryaprotech@gmail.com</strong>
                   </span>
                 </a>
-                <a className="footer-contact-item" href="https://maps.google.com/?q=Flat+No.4A,+Sayali+Darshan+-A-Wing,+Panchavati,+Nashik+-+422003" target="_blank" rel="noopener noreferrer">
+                <a className="footer-contact-item" href="https://maps.google.com/?q=Flat+No.4,+Sayali+Darshan+-A-Wing,+Panchavati,+Nashik+-+422003" target="_blank" rel="noopener noreferrer">
                   <i><MapPin size={21} /></i>
                   <span>
                     <strong>Nashik Office</strong>
-                    <small>Flat No.4A, Sayali Darshan -A-Wing, Panchavati, Nashik - 422003</small>
+                    <small>Flat No.4, Sayali Darshan -A-Wing, Panchavati, Nashik - 422003</small>
                   </span>
                 </a>
                 <a className="footer-contact-item" href="https://maps.google.com/?q=S-27,+Near+Emerson,+Ambad+MIDC,+Nashik,+Maharashtra+-+422010" target="_blank" rel="noopener noreferrer">

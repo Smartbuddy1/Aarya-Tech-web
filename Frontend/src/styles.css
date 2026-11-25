@@ -5123,7 +5123,8 @@ a.footer-contact-item:hover i {
 
 .media-modal {
   position: relative;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   width: min(1180px, 100%);
   max-height: calc(100vh - 72px);
   overflow: hidden;
@@ -5135,6 +5136,8 @@ a.footer-contact-item:hover i {
 
 .media-modal>img {
   width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
   max-height: calc(100vh - 160px);
   object-fit: contain;
   background: #090d16;
@@ -5147,6 +5150,8 @@ a.footer-contact-item:hover i {
 
 .media-modal.is-video>video {
   display: block;
+  flex: 1 1 auto;
+  min-height: 0;
   width: auto;
   height: auto;
   max-width: calc(100vw - 72px);
@@ -5168,6 +5173,8 @@ a.footer-contact-item:hover i {
 
 .media-caption {
   padding: 15px 20px 17px;
+  flex-shrink: 0;
+  background: #fff;
 }
 
 .media-caption span {

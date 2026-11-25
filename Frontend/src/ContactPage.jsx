@@ -57,13 +57,13 @@ function ContactPage({ onNavigateHome, onSubmit, mailStatus }) {
                 <i><Phone size={17} /></i>
                 <span><small>Call us</small>+91 9923810197, +91 8806796868</span>
               </a>
-              <a href="mailto:sales@theaaryatechnologies.com">
+              <a href="mailto:aryaprotech@gmail.com">
                 <i><Mail size={17} /></i>
-                <span><small>Email us</small>sales@theaaryatechnologies.com<br /><small style={{ fontSize: '0.85em', opacity: 0.9 }}>www.theaaryatechnologies.com</small></span>
+                <span><small>Email us</small>aryaprotech@gmail.com</span>
               </a>
               <div>
                 <i><MapPin size={17} /></i>
-                <span><small>Regd. Office</small>4A, Sayali Darshan A, Radha Nagar,<br />Makhamalabad Road, Panchavati,<br />Nashik - 422003</span>
+                <span><small>Regd. Office</small>4, Sayali Darshan A, Radha Nagar,<br />Makhamalabad Road, Panchavati,<br />Nashik - 422003</span>
               </div>
               <div>
                 <i><Factory size={17} /></i>
@@ -109,8 +109,8 @@ function ContactPage({ onNavigateHome, onSubmit, mailStatus }) {
               {isSending ? "Sending..." : "Send enquiry"} <ArrowRight size={18} />
             </button>
             <p className="contact-form-privacy"><ShieldCheck size={14} /> Your details are used only to respond to your enquiry.</p>
-            {mailStatus === "sent" && <p className="form-note">Your enquiry has been sent successfully.</p>}
-            {mailStatus === "error" && <p className="form-note error">Unable to send right now. Please try again.</p>}
+            {mailStatus === "sent" && <p className="form-note">Your email app has been opened with your enquiry details. Please send it, or email aryaprotech@gmail.com.</p>}
+            {mailStatus === "error" && <p className="form-note error">Unable to open email right now. Please email us directly at aryaprotech@gmail.com.</p>}
           </form>
         </div>
       </section>

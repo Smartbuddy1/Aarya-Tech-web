@@ -40,9 +40,9 @@ COMPANY CONTACT & LOCATION:
 ============================================================
 - Company Name: Aarya Technologies Pvt. Ltd.
 - Phone: +91 9923810197, +91 8806796868
-- Email: sales@theaaryatechnologies.com
-- Website: www.theaaryatechnologies.com
-- Regd. Office: 4A, Sayali Darshan A, Radha Nagar, Makhamalabad Road, Panchavati, Nashik - 422003
+- Email: aryaprotech@gmail.com
+- Website: aryaprotech@gmail.com (Email for all enquiries)
+- Regd. Office: 4, Sayali Darshan A, Radha Nagar, Makhamalabad Road, Panchavati, Nashik - 422003
 - Factory: S-27, Near Emerson, Ambad MIDC, Nashik, Maharashtra - 422010
 - Working Hours: Sun - Fri: 09:00 AM - 06:00 PM (Saturday Closed)
 
@@ -72,9 +72,9 @@ const isMarathiQuery = (query) => {
   const q = String(query || "").toLowerCase();
   if (/[\u0900-\u097F]/.test(q)) return true;
   const marathiTokens = [
-    "marathi", "sanga", "sang", "dya", "aahe", "ahe", "ahet", "kay", "kasa", "kashi", "kiti", 
-    "kuth", "kuthe", "kela", "madhe", "made", "kar", "kara", "pahije", "mahit", 
-    "mahiti", "namaskar", "namaste", "shubhechha", "baddal", "babat", "kon", "koni", "kuthla", 
+    "marathi", "sanga", "sang", "dya", "aahe", "ahe", "ahet", "kay", "kasa", "kashi", "kiti",
+    "kuth", "kuthe", "kela", "madhe", "made", "kar", "kara", "pahije", "mahit",
+    "mahiti", "namaskar", "namaste", "shubhechha", "baddal", "babat", "kon", "koni", "kuthla",
     "kuthle", "bol", "bola", "vikas", "kimat", "bhav", "patta", "sampark",
     "kahi", "vichar", "vicharayche", "vicharla", "shakto", "amhi", "tumhi", "pn", "tri", "hya", "tya", "ch"
   ];
@@ -187,10 +187,10 @@ How can I help you today?`,
 • **Company**: Aarya Technologies Pvt. Ltd. (Brand: **SMART BUDDY**)
 • **Leadership**: The company is led by a veteran Engineering Director bringing over **16+ years of specialized experience** in industrial automation, special purpose machines, and sustainable hygiene engineering.
 • **Establishment**: Founded in 2019 in Nashik, Maharashtra as a pioneering indigenous OEM manufacturer.
-• **Corporate Office**: 4A, Sayali Darshan A, Radha Nagar, Makhamalabad Road, Panchavati, Nashik - 422003
+• **Corporate Office**: 4, Sayali Darshan A, Radha Nagar, Makhamalabad Road, Panchavati, Nashik - 422003
 • **Factory**: S-27, Near Emerson, Ambad MIDC, Nashik, Maharashtra - 422010
 
-For executive inquiries, please contact **sales@theaaryatechnologies.com** or call **+91 9923810197 / +91 8806796868**.`,
+For executive inquiries, please contact **aryaprotech@gmail.com** or call **+91 9923810197 / +91 8806796868**.`,
     responseMr: `👤 **नेतृत्व व व्यवस्थापन (Leadership & Management)**:
 
 • **कंपनी**: आर्या टेक्नॉलॉजीज प्रायव्हेट लिमिटेड (ब्रँड: **SMART BUDDY**)
@@ -199,13 +199,13 @@ For executive inquiries, please contact **sales@theaaryatechnologies.com** or ca
 • **कार्यालय**: ४ए, सायली दर्शन ए, राधा नगर, मखमलाबाद रोड, पंचवटी, नाशिक - ४२२००३
 • **फॅक्टरी**: एस-२७, एमर्सन जवळ, अंबड एमआयडीसी, नाशिक, महाराष्ट्र - ४२२०१०
 
-थेट व्यवस्थापनाशी संपर्क किंवा चौकशीसाठी **sales@theaaryatechnologies.com** वर ईमेल करा किंवा **+91 9923810197 / +91 8806796868** वर कॉल करा.`
+थेट व्यवस्थापनाशी संपर्क किंवा चौकशीसाठी **aryaprotech@gmail.com** वर ईमेल करा किंवा **+91 9923810197 / +91 8806796868** वर कॉल करा.`
   },
   {
     id: "about_us",
     weight: 22,
     patterns: [
-      /\babout\s*(us|you|the\s*company|aarya|innovtech)\b/i,
+      /\babout\s*(us|you|the\s*company|aarya|innovtech|technology|technologies)\b/i,
       /\bwho\s+we\s+are\b/i,
       /\bwhat\s+do\s+you\s+do\b/i,
       /\bcompany\s*(profile|overview|details|history|mission|vision)\b/i,
@@ -248,14 +248,14 @@ Established in 2019 in Nashik, Maharashtra, **Aarya Technologies** is an ISO 900
     responseEn: `📞 **Contact Aarya Technologies**:
 
 • **Call Us**: +91 9923810197, +91 8806796868
-• **Email Us**: sales@theaaryatechnologies.com
-• **Regd. Office**: 4A, Sayali Darshan A, Radha Nagar, Makhamalabad Road, Panchavati, Nashik - 422003
+• **Email Us**: aryaprotech@gmail.com
+• **Regd. Office**: 4, Sayali Darshan A, Radha Nagar, Makhamalabad Road, Panchavati, Nashik - 422003
 • **Factory**: S-27, Near Emerson, Ambad MIDC, Nashik, Maharashtra - 422010
 • **Working Hours**: Sun - Fri: 09:00 AM - 06:00 PM`,
     responseMr: `📞 **आर्या टेक्नॉलॉजीजशी संपर्क साधा**:
 
 • **फोन नंबर**: +91 9923810197, +91 8806796868
-• **ईमेल**: sales@theaaryatechnologies.com
+• **ईमेल**: aryaprotech@gmail.com
 • **नोंदणीकृत कार्यालय**: ४ए, सायली दर्शन ए, राधा नगर, मखमलाबाद रोड, पंचवटी, नाशिक - ४२२००३
 • **फॅक्टरी**: एस-२७, एमर्सन जवळ, अंबड एमआयडीसी, नाशिक, महाराष्ट्र - ४२२०१०
 • **वेळ**: रविवार ते शुक्रवार: सकाळी ०९:०० ते संध्याकाळी ०६:००`
@@ -273,14 +273,14 @@ Established in 2019 in Nashik, Maharashtra, **Aarya Technologies** is an ISO 900
 
 Please share your specific requirements (Product model, capacity, installation location, and quantity) and our engineering team will provide a customized quotation:
 
-• **Email**: sales@theaaryatechnologies.com
+• **Email**: aryaprotech@gmail.com
 • **Call / WhatsApp**: +91 9923810197, +91 8806796868
 • **Working Hours**: Sun - Fri: 09:00 AM - 06:00 PM`,
     responseMr: `💰 **किंमत / कोटेशन मिळवण्यासाठी**:
 
 कृपया तुमच्या गरजेनुसार मॉडेल, क्षमता आणि ठिकाण सांगा. आमची इंजिनिअरिंग टीम तुम्हाला त्वरित कोटेशन पाठवेल:
 
-• **ईमेल**: sales@theaaryatechnologies.com
+• **ईमेल**: aryaprotech@gmail.com
 • **कॉल / व्हॉट्सॲप**: +91 9923810197, +91 8806796868
 • **वेळ**: रविवार ते शुक्रवार: सकाळी ०९:०० ते संध्याकाळी ०६:००`
   },
@@ -414,7 +414,7 @@ Please share your specific requirements (Product model, capacity, installation l
 5. 🖨️ **Printing Kiosk**: Document print, scan & photocopy station.
 6. 🍔 **Food Kiosk**: Touchscreen self-ordering terminal for restaurants & food courts.
 
-📞 *Contact sales at sales@theaaryatechnologies.com or +91 9923810197 / +91 8806796868 for quotes.*`,
+📞 *Contact sales at aryaprotech@gmail.com or +91 9923810197 / +91 8806796868 for quotes.*`,
     responseMr: `**आर्या टेक्नॉलॉजीज (AARYA TECHNOLOGIES)** कडे उपलब्ध असणारे सर्व अत्याधुनिक **इंटरॅक्टिव्ह कियोस्क**:
 
 1. 🖥️ **कॉम्प्युटर कियोस्क**: ई-गव्हर्नन्स व माहिती शोध स्टेशन.
@@ -424,7 +424,7 @@ Please share your specific requirements (Product model, capacity, installation l
 5. 🖨️ **प्रिंटिंग कियोस्क**: डॉक्युमेंट प्रिंटिंग व झेरॉक्स स्टेशन.
 6. 🍔 **फूड कियोस्क**: रेस्टॉरंट्ससाठी सेल्फ-ऑर्डरिंग टचस्क्रीन कियोस्क.
 
-📞 *कोटेशनसाठी संपर्क: sales@theaaryatechnologies.com किंवा +91 9923810197 / +91 8806796868.*`
+📞 *कोटेशनसाठी संपर्क: aryaprotech@gmail.com किंवा +91 9923810197 / +91 8806796868.*`
   },
   {
     id: "eco_toilet",
@@ -595,7 +595,7 @@ We are constantly looking for talented engineers and professionals in:
 • Production & Assembly
 • Sales, Business Development & Technical Support
 
-📧 To apply, please send your resume to **sales@theaaryatechnologies.com** or call **+91 9923810197 / +91 8806796868**.`,
+📧 To apply, please send your resume to **aryaprotech@gmail.com** or call **+91 9923810197 / +91 8806796868**.`,
     responseMr: `💼 **आर्या टेक्नॉलॉजीज येथे करिअरच्या संधी (Careers)**:
 
 आम्ही नेहमी प्रतिभावान इंजिनिअर्स आणि तंत्रज्ञांच्या शोधात असतो:
@@ -604,7 +604,7 @@ We are constantly looking for talented engineers and professionals in:
 • उत्पादन व असेंब्ली
 • विक्री, बिझनेस डेव्हलपमेंट आणि टेक्निकल सपोर्ट
 
-📧 अर्ज करण्यासाठी आपला रेझ्युमे **sales@theaaryatechnologies.com** वर पाठवा किंवा **+91 9923810197 / +91 8806796868** वर संपर्क साधा.`
+📧 अर्ज करण्यासाठी आपला रेझ्युमे **aryaprotech@gmail.com** वर पाठवा किंवा **+91 9923810197 / +91 8806796868** वर संपर्क साधा.`
   },
   {
     id: "gallery",
@@ -647,7 +647,7 @@ Detailed PDF technical brochures and spec sheets are available for:
 5. 🥤 PET Bottle Shredder (RVM)
 6. 🍫 Automated Vending Machines
 
-📥 You can download them directly from the respective product pages or email **sales@theaaryatechnologies.com** to receive the complete catalog.`,
+📥 You can download them directly from the respective product pages or email **aryaprotech@gmail.com** to receive the complete catalog.`,
     responseMr: `📄 **उत्पादनांचे ब्रोशर्स आणि कॅटलॉग (Brochures & Catalogs)**:
 
 सर्व उत्पादनांचे सविस्तर टेक्निकल पीडीएफ ब्रोशर्स उपलब्ध आहेत:
@@ -658,7 +658,7 @@ Detailed PDF technical brochures and spec sheets are available for:
 ५. 🥤 पीईटी बॉटल श्रेडर (RVM)
 ६. 🍫 स्वयंचलित व्हेंडिंग मशिन्स
 
-📥 आपण उत्पादन पेजवरून थेट डाउनलोड करू शकता किंवा **sales@theaaryatechnologies.com** वर ईमेल करू शकता.`
+📥 आपण उत्पादन पेजवरून थेट डाउनलोड करू शकता किंवा **aryaprotech@gmail.com** वर ईमेल करू शकता.`
   },
   {
     id: "all_products",
@@ -735,7 +735,7 @@ export default function Chatbot() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
-  
+
   // To keep track of the chat history for the API
   const [chatSession, setChatSession] = useState(null);
 
@@ -754,10 +754,10 @@ export default function Chatbot() {
     if (isOpen && !chatSession) {
       try {
         const session = ai.chats.create({
-            model: 'gemini-3.6-flash',
-            config: {
-                systemInstruction: SYSTEM_PROMPT,
-            }
+          model: 'gemini-3.6-flash',
+          config: {
+            systemInstruction: SYSTEM_PROMPT,
+          }
         });
         setChatSession(session);
       } catch (err) {
@@ -812,7 +812,7 @@ export default function Chatbot() {
 
   return (
     <>
-      <button 
+      <button
         className="chatbot-fab"
         onClick={() => setIsOpen(true)}
         style={{ display: isOpen ? 'none' : 'flex' }}
@@ -822,7 +822,7 @@ export default function Chatbot() {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -838,9 +838,9 @@ export default function Chatbot() {
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <button 
-                  className="chatbot-reset" 
-                  onClick={handleReset} 
+                <button
+                  className="chatbot-reset"
+                  onClick={handleReset}
                   title="Start fresh conversation"
                   type="button"
                   style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', padding: '4px', opacity: 0.85 }}
@@ -864,11 +864,11 @@ export default function Chatbot() {
                   </div>
                 </div>
               ))}
-              
+
               <div className="chatbot-suggestions">
                 {SUGGESTED_QUESTIONS.map((q, idx) => (
-                  <button 
-                    key={idx} 
+                  <button
+                    key={idx}
                     className="suggestion-chip"
                     onClick={() => handleSend(q.query || q.label || q)}
                     disabled={isLoading}
@@ -891,8 +891,8 @@ export default function Chatbot() {
             </div>
 
             <div className="chatbot-input">
-              <input 
-                type="text" 
+              <input
+                type="text"
                 placeholder="Type your message..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
