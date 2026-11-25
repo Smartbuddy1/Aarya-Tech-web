@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SEO = ({ title, description, canonical, type = 'website', image = 'https://aaryainnovtech.com/images/aarya-innovtech-logo-640.png' }) => {
-  const fullTitle = `${title} | Aarya Innovtech`;
-  const url = canonical || 'https://aaryainnovtech.com';
+const SEO = ({ title, description, canonical, type = 'website', image = 'https://theaaryatechnologies.com/images/aarya-technologies-logo-640.png' }) => {
+  const fullTitle = `${title} | Aarya Technologies`;
+  const url = canonical || 'https://theaaryatechnologies.com';
 
   return (
     <Helmet>

@@ -63,7 +63,7 @@ const rawAchievementSections = [  {
     hero: imagePath("global-impact-forum", "global-impact-stage-handshake.jpg"),
     heroAlt: "Handshake moment on the Global Impact Forum stage",
     summary:
-      "A first-priority recognition section featuring Aarya Innovtech moments from the Global Impact Forum stage and Udyog Bharati program.",
+      "A first-priority recognition section featuring Aarya Technologies moments from the Global Impact Forum stage and Udyog Bharati program.",
     highlights: ["Global Impact Forum", "Certificate presentation", "Udyog Bharati recognition"],
     images: [
       ["global-impact-certificate-presentation.jpg", "Certificate presentation on stage at the Global Impact Forum"],
@@ -95,17 +95,17 @@ const rawAchievementSections = [  {
   {
     id: "nashik-next",
     eyebrow: "Industry recognition",
-    title: "Aarya Innovtech recognition at Nashik Next",
+    title: "Aarya Technologies recognition at Nashik Next",
     location: "Sakal and Deepak Builders & Developers event",
     date: "7th anniversary recognition",
     icon: Trophy,
     hero: imagePath("nashik-next", "award-group-wide.jpeg"),
-    heroAlt: "Aarya Innovtech recognition group photograph at Nashik Next",
+    heroAlt: "Aarya Technologies recognition group photograph at Nashik Next",
     summary:
-      "Recognition for Aarya Innovtech's journey, public-impact work, and the founder team.",
-    highlights: ["Aarya Innovtech recognition", "Certificate presentation", "Founder visibility"],
+      "Recognition for Aarya Technologies' journey, public-impact work, and the founder team.",
+    highlights: ["Aarya Technologies recognition", "Certificate presentation", "Founder visibility"],
     images: [
-      ["recognition-collage.jpeg", "Aarya Innovtech recognition collage"],
+      ["recognition-collage.jpeg", "Aarya Technologies recognition collage"],
     ].map(([file, alt], i) => ({ id: `nn-${i}`, src: imagePath("nashik-next", file), alt })),
   },
   {
@@ -179,7 +179,7 @@ function AchievementPage({ onNavigateHome, onOpenMedia }) {
             </span>
             <h1>Recognitions, public programs, and community impact moments.</h1>
             <p>
-              Aarya Innovtech's achievement story is organized here by context:
+              Aarya Technologies' achievement story is organized here by context:
               forum recognition, student programs, industry awards, institute mentoring, and professional dialogue.
             </p>
             <div className="achievements-page-actions">

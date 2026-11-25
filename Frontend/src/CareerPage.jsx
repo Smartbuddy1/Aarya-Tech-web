@@ -223,7 +223,7 @@ function CareerPage({ onNavigateHome }) {
             </button>
             <span className="eyebrow light"><BriefcaseBusiness size={15} /> Careers</span>
             <h1>Careers</h1>
-            <p>Explore opportunities and build your career with Aarya Innovtech.</p>
+            <p>Explore opportunities and build your career with Aarya Technologies.</p>
           </div>
         </div>
       </section>
@@ -233,38 +233,38 @@ function CareerPage({ onNavigateHome }) {
           <div className="career-page-layout">
             {/* Top Section: Why Join Us */}
             <div className="career-why-join-us">
-              <h2>Why join Aarya Innovtech?</h2>
+              <h2>Why join Aarya Technologies?</h2>
               <p>
-                At Aarya Innovtech Pvt. Ltd., we believe in empowering our people to create innovative, sustainable solutions that make a real difference. We offer a collaborative environment where engineering excellence and creativity thrive.
+                At Aarya Technologies Pvt. Ltd., we believe in empowering our people to create innovative, sustainable solutions that make a real difference. We offer a collaborative environment where engineering excellence and creativity thrive.
               </p>
               <p>
                 Whether you are designing special purpose machines, working on eco-friendly hygiene products, or driving our growth, you will be part of a mission-driven team dedicated to building a cleaner and smarter world. We provide opportunities for continuous learning, professional growth, and the chance to work on impactful projects.
               </p>
 
               <div className="career-perks-list" style={{ marginTop: "24px", display: "grid", gap: "12px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", color: "#102c26", fontSize: "14px", fontWeight: "600" }}>
-                  <CheckCircle2 size={18} color="#08725f" />
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", color: "#111827", fontSize: "14px", fontWeight: "600" }}>
+                  <CheckCircle2 size={18} color="#fcbe12" />
                   <span>Innovative engineering & OEM product development</span>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", color: "#102c26", fontSize: "14px", fontWeight: "600" }}>
-                  <CheckCircle2 size={18} color="#08725f" />
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", color: "#111827", fontSize: "14px", fontWeight: "600" }}>
+                  <CheckCircle2 size={18} color="#fcbe12" />
                   <span>Work on national smart city & eco-sanitation projects</span>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", color: "#102c26", fontSize: "14px", fontWeight: "600" }}>
-                  <CheckCircle2 size={18} color="#08725f" />
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", color: "#111827", fontSize: "14px", fontWeight: "600" }}>
+                  <CheckCircle2 size={18} color="#fcbe12" />
                   <span>Collaborative, learning-oriented culture & career growth</span>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", color: "#102c26", fontSize: "14px", fontWeight: "600" }}>
-                  <CheckCircle2 size={18} color="#08725f" />
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", color: "#111827", fontSize: "14px", fontWeight: "600" }}>
+                  <CheckCircle2 size={18} color="#fcbe12" />
                   <span>Direct exposure to end-to-end manufacturing & IoT systems</span>
                 </div>
               </div>
 
-              <div style={{ marginTop: "28px", padding: "18px", background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius: "8px", display: "grid", gap: "6px" }}>
-                <strong style={{ color: "#166534", fontSize: "14px", display: "flex", alignItems: "center", gap: "6px" }}>
+              <div style={{ marginTop: "28px", padding: "18px", background: "#f8fafc", border: "1px solid rgba(252, 190, 18, 0.3)", borderRadius: "8px", display: "grid", gap: "6px" }}>
+                <strong style={{ color: "#111827", fontSize: "14px", display: "flex", alignItems: "center", gap: "6px" }}>
                   <Building2 size={16} /> Location: Ambad MIDC, Nashik
                 </strong>
-                <small style={{ color: "#15803d", fontSize: "12.5px" }}>
+                <small style={{ color: "#64748b", fontSize: "12.5px" }}>
                   Plant: S-27, Near Emerson, Ambad MIDC, Nashik, Maharashtra - 422010
                 </small>
               </div>
@@ -274,10 +274,10 @@ function CareerPage({ onNavigateHome }) {
             <div className="career-vacancies-section">
               <div className="career-vacancies-header">
                 <div>
-                  <span className="eyebrow" style={{ color: "#08725f", marginBottom: "4px" }}>
+                  <span className="eyebrow" style={{ color: "#b71e86", marginBottom: "4px" }}>
                     <BriefcaseBusiness size={14} /> Current Openings
                   </span>
-                  <h3 style={{ margin: "4px 0 0", color: "#102c26", fontSize: "22px", fontWeight: "700" }}>
+                  <h3 style={{ margin: "4px 0 0", color: "#111827", fontSize: "22px", fontWeight: "700" }}>
                     Current Job Vacancies
                   </h3>
                 </div>
@@ -443,8 +443,8 @@ function CareerPage({ onNavigateHome }) {
                   gridColumn: "1 / -1",
                   marginTop: "8px",
                   padding: "24px 22px",
-                  background: "linear-gradient(135deg, #022b24 0%, #064438 52%, #03231d 100%)",
-                  border: "1px solid rgba(210, 243, 139, 0.28)",
+                  background: "linear-gradient(135deg, #090d16 0%, #0f172a 52%, #161f33 100%)",
+                  border: "1px solid rgba(252, 190, 18, 0.35)",
                   borderRadius: "10px",
                   color: "#ffffff",
                   display: "flex",
@@ -452,10 +452,10 @@ function CareerPage({ onNavigateHome }) {
                   alignItems: "center",
                   justifyContent: "space-between",
                   gap: "18px",
-                  boxShadow: "0 10px 26px rgba(2, 43, 36, 0.16)"
+                  boxShadow: "0 10px 26px rgba(0, 0, 0, 0.25)"
                 }}>
                   <div style={{ maxWidth: "580px" }}>
-                    <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "#d2f38b", fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "6px" }}>
+                    <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "#fcbe12", fontSize: "12px", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "6px" }}>
                       <Sparkles size={14} /> Talent Network
                     </div>
                     <h3 style={{ margin: "0 0 6px", fontSize: "19px", fontWeight: "700", color: "#ffffff" }}>
@@ -470,9 +470,9 @@ function CareerPage({ onNavigateHome }) {
                     className="button primary small"
                     onClick={() => handleApplyClick("", "")}
                     style={{
-                      background: "#0bbfa6",
+                      background: "linear-gradient(135deg, #b71e86 0%, #fcbe12 100%)",
                       color: "#ffffff",
-                      borderColor: "#0bbfa6",
+                      borderColor: "#fcbe12",
                       fontWeight: "600",
                       padding: "10px 22px",
                       borderRadius: "6px",
@@ -480,7 +480,7 @@ function CareerPage({ onNavigateHome }) {
                       alignItems: "center",
                       gap: "8px",
                       cursor: "pointer",
-                      boxShadow: "0 4px 14px rgba(11, 191, 166, 0.35)"
+                      boxShadow: "0 4px 14px rgba(183, 30, 134, 0.35)"
                     }}
                   >
                     <FileUp size={15} /> Submit Resume
@@ -627,13 +627,13 @@ function CareerPage({ onNavigateHome }) {
               </button>
 
               {submitted === "sent" && (
-                <div style={{ padding: "12px", background: "#f0fdf4", border: "1px solid #86efac", borderRadius: "6px", color: "#166534", fontSize: "14px", fontWeight: "600", textAlign: "center" }}>
+                <div style={{ padding: "12px", background: "#f8fafc", border: "1px solid #86efac", borderRadius: "6px", color: "#111827", fontSize: "14px", fontWeight: "600", textAlign: "center" }}>
                   ✅ Application submitted successfully! Our HR team will review your profile.
                 </div>
               )}
               {submitted === "error" && (
                 <div style={{ padding: "12px", background: "#fef2f2", border: "1px solid #fca5a5", borderRadius: "6px", color: "#991b1b", fontSize: "14px", fontWeight: "600", textAlign: "center" }}>
-                  ❌ Unable to send application right now. Please try again or email us directly at hr@aaryainnovtech.com.
+                  ❌ Unable to send application right now. Please try again or email us directly at sales@theaaryatechnologies.com.
                 </div>
               )}
             </form>

@@ -25,10 +25,10 @@ function ContactPage({ onNavigateHome, onSubmit, mailStatus }) {
               <ArrowLeft size={15} />
               Home
             </button>
-            <span className="eyebrow light"><Mail size={15} /> Contact Aarya Innovtech</span>
+            <span className="eyebrow light"><Mail size={15} /> Contact Aarya Technologies</span>
             <h1>Contact Us.</h1>
             <p>
-              Contact Aarya Innovtech for product enquiries, project discussion,
+              Contact Aarya Technologies for product enquiries, project discussion,
               installation support, and service help.
             </p>
           </div>
@@ -53,13 +53,13 @@ function ContactPage({ onNavigateHome, onSubmit, mailStatus }) {
             </div>
 
             <div className="contact-details" id="contact-details">
-              <a href="tel:+918806796868" aria-label="Call Aarya Innovtech">
+              <a href="tel:+919923810197" aria-label="Call Aarya Technologies">
                 <i><Phone size={17} /></i>
-                <span><small>Call us</small>+91 88067 96868 / +91 9923810197</span>
+                <span><small>Call us</small>+91 9923810197, +91 8806796868</span>
               </a>
-              <a href="mailto:sales@aaryainnovtech.com">
+              <a href="mailto:sales@theaaryatechnologies.com">
                 <i><Mail size={17} /></i>
-                <span><small>Email us</small>sales@aaryainnovtech.com</span>
+                <span><small>Email us</small>sales@theaaryatechnologies.com<br /><small style={{ fontSize: '0.85em', opacity: 0.9 }}>www.theaaryatechnologies.com</small></span>
               </a>
               <div>
                 <i><MapPin size={17} /></i>
@@ -105,7 +105,7 @@ function ContactPage({ onNavigateHome, onSubmit, mailStatus }) {
               <label htmlFor="contact-page-message">How can we help?</label>
               <textarea id="contact-page-message" name="message" rows="5" placeholder="Tell us what you need..." maxLength={900} required />
             </div>
-            <button className="button dark" type="submit" disabled={isSending}>
+            <button className="button primary" type="submit" disabled={isSending}>
               {isSending ? "Sending..." : "Send enquiry"} <ArrowRight size={18} />
             </button>
             <p className="contact-form-privacy"><ShieldCheck size={14} /> Your details are used only to respond to your enquiry.</p>

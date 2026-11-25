@@ -222,8 +222,9 @@ function WhatsAppIcon({ size = 22 }) {
   );
 }
 
-const aaryaInnovtechLogo = "/images/aarya-innovtech-logo-640.png";
-const aaryaInnovtechHeaderLogo = "/images/aarya-innovtech-navbar-tight.png";
+const aaryaInnovtechLogo = "/images/aarya-technologies-logo-640.png?v=6";
+const aaryaInnovtechHeaderLogo = "/images/aarya-technologies-navbar.png?v=6";
+const aaryaTechnologiesFooterLogo = "/images/aarya-technologies-logo.png?v=6";
 const heroBackgroundImage = "/media/hero/beach-toilet-hero.jpg";
 const newImage = (file) => `/new%20images/${file}`;
 const productImage = (file) => `/media/products/product-page-images/${file}`;
@@ -234,7 +235,7 @@ const heroSlides = [
     title: "Ideas engineered into reality.",
     text: (
       <>
-        Aarya Innovtech manufactures special purpose machines<br />
+        Aarya Technologies manufactures special purpose machines<br />
         for the hygiene sector, including public sanitation,<br />
         waste treatment, recycling, kiosks, and hygiene-support systems.<br />
         Built for public spaces and institutions,<br />
@@ -264,7 +265,7 @@ const heroSlides = [
   {
     eyebrow: "High-footfall hygiene",
     title: "Scalable public toilet infrastructure built for real sites.",
-    text: "From single units to multi-cabin installations, Aarya Innovtech delivers clean, maintainable, and site-ready sanitation systems.",
+    text: "From single units to multi-cabin installations, Aarya Technologies delivers clean, maintainable, and site-ready sanitation systems.",
     image: newImage("01-bio-toilet-exterior-orange-1200x800.jpg"),
   },
 ];
@@ -274,7 +275,7 @@ const heroSlides = [
 const newArrivalProduct = {
   eyebrow: "New arrival",
   title: "Solar-ready smart toilet block",
-  text: "A compact public toilet block concept with men, women, and accessible cabins, exterior lighting, rooftop solar support, and Aarya Innovtech branding for civic locations.",
+  text: "A compact public toilet block concept with men, women, and accessible cabins, exterior lighting, rooftop solar support, and Aarya Technologies branding for civic locations.",
   image: newImage("13-public-utility-kiosk-render-1200x800.jpg"),
   images: [
     {
@@ -354,7 +355,7 @@ const products = [
   {
     title: "Computer Kiosk",
     short: "Listed special purpose machine category from the company profile.",
-    text: "Computer Kiosk is listed in the profile as part of Aarya Innovtech's special purpose machine range. The PDF does not provide separate technical specifications, so configuration should be finalized by requirement.",
+    text: "Computer Kiosk is listed in the profile as part of Aarya Technologies' special purpose machine range. The PDF does not provide separate technical specifications, so configuration should be finalized by requirement.",
     icon: Monitor,
     tag: "Digital access",
     accent: "violet",
@@ -378,7 +379,7 @@ const products = [
   {
     title: "Steel Porta Cabin",
     short: "Heavy-duty prefabricated portable cabins for site offices, security & commercial shelters.",
-    text: "Aarya Innovtech Steel Porta Cabins are rugged, thermally insulated, and weather-proof prefabricated structures designed for quick deployment and durability across construction sites and industrial hubs.",
+    text: "Aarya Technologies Steel Porta Cabins are rugged, thermally insulated, and weather-proof prefabricated structures designed for quick deployment and durability across construction sites and industrial hubs.",
     icon: Building2,
     tag: "Prefab structures",
     accent: "blue",
@@ -517,6 +518,7 @@ const preloadHomeAssets = () => {
   [
     aaryaInnovtechLogo,
     aaryaInnovtechHeaderLogo,
+    aaryaTechnologiesFooterLogo,
     heroBackgroundImage,
     heroSlides[0]?.image,
     (products[0]?.heroImage || products[0]?.image),
@@ -588,7 +590,7 @@ const solutionJourneys = [
 ];
 
 const stats = [
-  { value: "2019", label: "Since", detail: "OEM in hygiene sector", icon: Award },
+  { value: "2010", label: "Since", detail: "OEM in hygiene sector", icon: Award },
   { value: "500L", label: "Water tank", detail: "E2T overhead tank quantity", icon: Droplets },
   { value: ">99%", label: "Pathogen reduction", detail: "Bio-Digester hygiene performance", icon: ShieldCheck },
   { value: "24x7", label: "Surveillance", detail: "Voice assistance and anti-theft alarm", icon: Monitor },
@@ -611,7 +613,7 @@ const testimonials = [
   },
   {
     title: "Client testimonial 01",
-    quote: "A short field view of an Aarya Innovtech installation with practical feedback from the site.",
+    quote: "A short field view of an Aarya Technologies installation with practical feedback from the site.",
     role: "Field feedback",
     video: "/media/testimonials/video6150114488919007873.mp4",
     poster: "/media/testimonials/posters/video6150114488919007873-poster.png",
@@ -834,17 +836,17 @@ const homeAchievementSections = [
   {
     id: "nashik-next",
     label: "Industry recognition",
-    title: "Aarya Innovtech recognition at Nashik Next",
+    title: "Aarya Technologies recognition at Nashik Next",
     images: [
       {
         title: "Recognition group",
         src: achievementImagePath("nashik-next", "award-group-wide.jpeg"),
-        alt: "Aarya Innovtech recognition group photograph at Nashik Next",
+        alt: "Aarya Technologies recognition group photograph at Nashik Next",
       },
       {
         title: "Recognition collage",
         src: achievementImagePath("nashik-next", "recognition-collage.jpeg"),
-        alt: "Aarya Innovtech recognition collage",
+        alt: "Aarya Technologies recognition collage",
       },
     ],
   }
@@ -1973,14 +1975,14 @@ function App() {
   const getSEOProps = () => {
     if (activeProductPage) return { title: activeProductPage.title, description: activeProductPage.short };
     if (activeClientPage) return { title: "Clients", description: "Trusted by public-sector and institutional organizations." };
-    if (activeAboutPage) return { title: "About", description: "Learn more about Aarya Innovtech." };
+    if (activeAboutPage) return { title: "About", description: "Learn more about Aarya Technologies." };
     if (activeAchievementPage) return { title: "Achievements", description: "Our awards and recognitions." };
     if (activeCareerPage) return { title: "Careers", description: "Join our team." };
     if (activeGalleryPage) return { title: "Gallery", description: "Photos and videos of our installations." };
-    if (activeContactPage) return { title: "Contact", description: "Get in touch with Aarya Innovtech." };
+    if (activeContactPage) return { title: "Contact", description: "Get in touch with Aarya Technologies." };
     if (activeNewArrivalsPage) return { title: "New Arrivals", description: "Check out our latest product arrivals." };
     if (activePrivacyPolicyPage) return { title: "Privacy Policy", description: "Our privacy policy." };
-    return { title: "Eco Hygiene & Waste Management Solutions", description: "Aarya Innovtech manufactures eco-friendly hygiene, sanitation, recycling, kiosk, and waste-management solutions." };
+    return { title: "Eco Hygiene & Waste Management Solutions", description: "Aarya Technologies manufactures eco-friendly hygiene, sanitation, recycling, kiosk, and waste-management solutions." };
   };
   const seoProps = getSEOProps();
 
@@ -1989,7 +1991,7 @@ function App() {
       <>
         <SEO {...seoProps} />
         {loaderVisible ? (
-          <div className={`site-loader ${siteLoading ? "" : "is-hidden"}`} role="status" aria-label="Loading Aarya Innovtech website">
+          <div className={`site-loader ${siteLoading ? "" : "is-hidden"}`} role="status" aria-label="Loading Aarya Technologies website">
             <div className="site-loader-panel">
               <div className="site-loader-logo-card" aria-hidden="true">
                 <span className="site-loader-pulse" />
@@ -2018,7 +2020,7 @@ function App() {
           <span className="scroll-progress" ref={scrollProgressRef} />
           <m.nav className="container navbar" aria-label="Main navigation" variants={navbarInnerVariants} initial={motionInitial} animate="visible">
             <m.button className="brand" onClick={() => scrollToSection("home")} aria-label="Go to home" variants={navbarSectionVariants}>
-              <img src={aaryaInnovtechHeaderLogo} alt="Aarya Innovtech" decoding="async" />
+              <img src={aaryaInnovtechHeaderLogo} alt="Aarya Technologies" decoding="async" />
             </m.button>
             <div
               className={`nav-links ${menuOpen ? "is-open" : ""}`}
@@ -2138,17 +2140,18 @@ function App() {
                   {label}
                 </button>
               ))}
-              <button
+              <a
                 className="nav-login"
-                type="button"
+                href="https://aaryainnovtech.com/e2t/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => {
                   setMenuOpen(false);
                   setProductMenuOpen(false);
-                  window.location.assign("https://aaryainnovtech.com/e2t/login");
                 }}
               >
                 Login
-              </button>
+              </a>
             </div>
             <m.button
               className="menu-toggle"
@@ -2247,10 +2250,10 @@ function App() {
                                 Talk to our team
                               </button>
                             </m.div>
-                            <m.div className="hero-proof-strip" aria-label="Aarya Innovtech proof points" variants={heroItemVariants} style={{ marginTop: "32px", width: "fit-content" }}>
+                            <m.div className="hero-proof-strip" aria-label="Aarya Technologies proof points" variants={heroItemVariants} style={{ marginTop: "32px", width: "fit-content" }}>
                               <div>
                                 <ShieldCheck size={22} />
-                                <p><strong>OEM since 2019</strong><span>Trusted by government & private organizations</span></p>
+                                <p><strong>OEM since 2010</strong><span>Trusted by government & private organizations</span></p>
                               </div>
                               <div>
                                 <BadgeCheck size={22} />
@@ -2302,7 +2305,7 @@ function App() {
                                 </span>
                               </button>
                             </div>
-                            <div className="hero-product-strip" aria-label="Featured Aarya Innovtech products">
+                            <div className="hero-product-strip" aria-label="Featured Aarya Technologies products">
                               {heroCarouselProducts.map((product, index) => (
                                 <button
                                   className={`hero-product-tile ${index === activeFeaturedIndex ? "is-active" : ""}`}
@@ -2346,7 +2349,7 @@ function App() {
                         <div className="container intro-grid" data-reveal>
                           <div>
                             <BadgeCheck size={23} />
-                            <p><strong>OEM since 2019</strong><span>Special purpose machines</span></p>
+                            <p><strong>OEM since 2010</strong><span>Special purpose machines</span></p>
                           </div>
                           <div>
                             <Star size={23} />
@@ -2366,7 +2369,7 @@ function App() {
                               <img src={newImage("11-eco-toilet-ranchi-twin-1200x800.jpg")} alt="Installed electronic eco toilets" loading="lazy" decoding="async" />
                             </div>
                             <div className="experience-badge">
-                              <strong>2019</strong>
+                              <strong>2010</strong>
                               <span>OEM since</span>
                             </div>
                           </div>
@@ -2374,8 +2377,8 @@ function App() {
                             <span className="eyebrow"><Building2 size={15} /> Company Overview</span>
                             <h2>Original Equipment Manufacturer of special purpose machines.</h2>
                             <p className="lead">
-                              Aarya Innovtech is an OEM for hygiene-sector special purpose machines
-                              since 2019.
+                              Aarya Technologies is an OEM for hygiene-sector special purpose machines
+                              since 2010.
                             </p>
                             <p>
                               The product range covers Electronic ECO Toilet, Bio-Digester, Organic Waste
@@ -2397,7 +2400,7 @@ function App() {
                             <p>Less reading, more product clarity. Pick a machine to view deployment details.</p>
                           </div>
 
-                          <div className="product-spotlight-marquee" aria-label="Aarya Innovtech product showcase">
+                          <div className="product-spotlight-marquee" aria-label="Aarya Technologies product showcase">
                             <div className="product-spotlight-track">
                               {[0, 1, 2, 3].map((groupIndex) => (
                                 <div className="product-spotlight-group" aria-hidden={groupIndex > 0 ? "true" : undefined} key={`product-marquee-${groupIndex}`}>
@@ -2480,7 +2483,7 @@ function App() {
                               <h2>Project and installation gallery.</h2>
                             </div>
                             <p>
-                              Explore modular configurations, installed eco toilets, community utility concepts, and the technology behind Aarya Innovtech solutions.
+                              Explore modular configurations, installed eco toilets, community utility concepts, and the technology behind Aarya Technologies solutions.
                             </p>
                           </div>
                           <div className="project-gallery-toolbar" data-reveal>
@@ -2616,13 +2619,13 @@ function App() {
         >
           <div className="container footer-grid">
             <div className="footer-brand" data-reveal style={{ "--reveal-delay": "0ms" }}>
-              <img src={aaryaInnovtechHeaderLogo} alt="Aarya Innovtech Pvt. Ltd." loading="lazy" decoding="async" />
+              <img src={aaryaTechnologiesFooterLogo} alt="Aarya Technologies" loading="lazy" decoding="async" />
               <p>
-                Redefining public hygiene infrastructure with engineered Aarya Innovtech solutions
+                Redefining public hygiene infrastructure with engineered Aarya Technologies solutions
                 for sanitation, waste management, recycling, and digital utility access.
               </p>
               <span>Innovate. Integrate. Elevate.</span>
-              <div className="footer-social-block" aria-label="Follow Aarya Innovtech">
+              <div className="footer-social-block" aria-label="Follow Aarya Technologies">
                 <strong>Follow us</strong>
                 <div className="footer-socials">
                   <a href="https://in.linkedin.com/in/smart-buddy-818445190" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -2698,17 +2701,18 @@ function App() {
             <div className="footer-contact-column" data-reveal style={{ "--reveal-delay": "240ms" }}>
               <h3>Get in touch</h3>
               <div className="footer-contact-list">
-                <a className="footer-contact-item" href="tel:+918806796868">
+                <a className="footer-contact-item" href="tel:+919923810197">
                   <i><Phone size={21} /></i>
                   <span>
-                    <strong>+91 88067 96868 / +91 9923810197</strong>
+                    <strong>+91 9923810197, +91 8806796868</strong>
                     <small>Sun - Fri: 09:00 AM - 06:00 PM</small>
                   </span>
                 </a>
-                <a className="footer-contact-item" href="mailto:sales@aaryainnovtech.com">
+                <a className="footer-contact-item" href="mailto:sales@theaaryatechnologies.com">
                   <i><Mail size={21} /></i>
                   <span>
-                    <strong>sales@aaryainnovtech.com</strong>
+                    <strong>sales@theaaryatechnologies.com</strong>
+                    <small>www.theaaryatechnologies.com</small>
                   </span>
                 </a>
                 <a className="footer-contact-item" href="https://maps.google.com/?q=Flat+No.4A,+Sayali+Darshan+-A-Wing,+Panchavati,+Nashik+-+422003" target="_blank" rel="noopener noreferrer">
@@ -2731,7 +2735,7 @@ function App() {
           <div className="container footer-bottom">
             <div className="footer-bottom-brand">
               <i><ShieldCheck size={24} /></i>
-              <p>Copyright Aarya Innovtech Pvt. Ltd. All Rights Reserved.</p>
+              <p>Copyright Aarya Technologies Pvt. Ltd. All Rights Reserved.</p>
             </div>
             <div className="footer-bottom-actions">
               <button onClick={navigateToPrivacyPolicy} type="button">Privacy Policy</button>
@@ -2745,16 +2749,16 @@ function App() {
 
         <a
           className="floating-whatsapp"
-          href="https://wa.me/919503331635?text=Hello%20Aarya%20Innovtech%20team%2C%20I%20need%20help%20with%20a%20solution."
+          href="https://wa.me/919923810197?text=Hello%20Aarya%20Technologies%20team%2C%20I%20need%20help%20with%20a%20solution."
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Chat with Aarya Innovtech on WhatsApp"
+          aria-label="Chat with Aarya Technologies on WhatsApp"
         >
           <WhatsAppIcon size={24} />
           <span className="floating-whatsapp-pulse" />
         </a>
 
-        <a className="floating-call" href="tel:+919503331635" aria-label="Call Aarya Innovtech">
+        <a className="floating-call" href="tel:+919923810197" aria-label="Call Aarya Technologies">
           <Phone size={22} />
         </a>
 

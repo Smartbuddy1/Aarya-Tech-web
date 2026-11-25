@@ -714,7 +714,7 @@ const vendingMachines = {
   ],
   subtitle: "Automated hygiene & refreshment vending machine range",
   summary:
-    "Aarya Innovtech manufactures a versatile range of automated vending machines, including wall-mounted Sanitary Napkin Vending Machines for women-friendly public washrooms, and climate-controlled Food & Beverage Vending Machines for high-footfall civic and corporate venues.",
+    "Aarya Technologies manufactures a versatile range of automated vending machines, including wall-mounted Sanitary Napkin Vending Machines for women-friendly public washrooms, and climate-controlled Food & Beverage Vending Machines for high-footfall civic and corporate venues.",
   image: "/imagesss/food vending machines.png",
   imageAlt: "Food vending machine",
   galleryImages: [
@@ -770,7 +770,7 @@ const steelPortaCabin = {
   navLabel: "Steel Porta Cabin",
   subtitle: "Heavy-duty prefabricated portable cabins for site offices, security & commercial shelters",
   summary:
-    "Aarya Innovtech Steel Porta Cabins are rugged, thermally insulated, and weather-proof prefabricated structures. Designed for quick deployment, durability, and low maintenance across construction sites, security checkpoints, remote industrial projects, and commercial hubs.",
+    "Aarya Technologies Steel Porta Cabins are rugged, thermally insulated, and weather-proof prefabricated structures. Designed for quick deployment, durability, and low maintenance across construction sites, security checkpoints, remote industrial projects, and commercial hubs.",
   image: "/images/product-catalog/steel-porta-cabin.jpeg",
   imageAlt: "Steel Porta Cabin",
   galleryImages: [

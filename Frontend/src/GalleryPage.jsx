@@ -22,16 +22,16 @@ const rawGallerySections = [
   {
     id: "featured-videos",
     eyebrow: "Featured highlights",
-    title: "Aarya Innovtech visual highlights",
+    title: "Aarya Technologies visual highlights",
     summary: "Portfolio visuals, recognition moments, and brand communication assets.",
     icon: PlayCircle,
     images: [
       {
         id: "feat-vid-company-portfolio",
-        src: galleryPath("featured-videos", "smart-buddy-company-portfolio.mp4"),
-        poster: galleryPath("featured-videos", "aarya-innovtech-company-portfolio-poster.jpg"),
-        title: "Aarya Innovtech company portfolio reel",
-        alt: "Aarya Innovtech company portfolio video opening with the company brand and engineering message",
+        src: galleryPath("featured-videos", "smart-buddy-company-portfolio.mp4?v=3"),
+        poster: galleryPath("featured-videos", "aarya-innovtech-company-portfolio-poster.jpg?v=3"),
+        title: "Aarya Technologies company portfolio reel",
+        alt: "Aarya Technologies company portfolio video opening with the company brand and engineering message",
         size: "wide",
         type: "video",
         width: 1280,
@@ -87,8 +87,8 @@ const rawGallerySections = [
       {
         id: "sports-cricket-team-wide",
         src: galleryPath("sports-league", "aarya-innovtech-cricket-team-wide.jpg"),
-        title: "Aarya Innovtech cricket team",
-        alt: "Aarya Innovtech cricket team group photograph at Sakal Premier League Nashik",
+        title: "Aarya Technologies cricket team",
+        alt: "Aarya Technologies cricket team group photograph at Sakal Premier League Nashik",
         size: "large",
         width: 1600,
         height: 1200,
@@ -97,7 +97,7 @@ const rawGallerySections = [
         id: "sports-kit-handover",
         src: galleryPath("sports-league", "aarya-innovtech-kit-handover.jpg"),
         title: "Team kit handover",
-        alt: "Aarya Innovtech team kit handover at the Sakal Premier League Nashik event",
+        alt: "Aarya Technologies team kit handover at the Sakal Premier League Nashik event",
         size: "large",
         width: 900,
         height: 1600,
@@ -106,7 +106,7 @@ const rawGallerySections = [
         id: "sports-team-stage",
         src: optimizedGalleryPath("sports-league", "aarya-innovtech-team-stage.jpg"),
         title: "Team stage photograph",
-        alt: "Aarya Innovtech team group photograph in front of the event sponsor wall",
+        alt: "Aarya Technologies team group photograph in front of the event sponsor wall",
         size: "large",
         width: 3120,
         height: 4160,
@@ -124,7 +124,7 @@ const rawGallerySections = [
         id: "leadership-global-moment",
         src: galleryPath("leadership", "leadership-global-moment.jpg"),
         title: "Founder global moment",
-        alt: "Aarya Innovtech founder photographed during an international travel moment",
+        alt: "Aarya Technologies founder photographed during an international travel moment",
         size: "portrait",
         width: 768,
         height: 1362,
@@ -149,7 +149,7 @@ const rawGallerySections = [
         id: "student-mentorship-interaction",
         src: galleryPath("student-mentorship", "student-mentorship-interaction.jpg"),
         title: "Student Mentorship Interaction",
-        alt: "Aarya Innovtech leadership with student group during mentorship interaction",
+        alt: "Aarya Technologies leadership with student group during mentorship interaction",
         size: "portrait",
         width: 768,
         height: 1024,
@@ -270,10 +270,10 @@ function GalleryPage({ onNavigateHome, onOpenMedia }) {
             <span className="eyebrow light">
               <Camera size={15} /> Visuals
             </span>
-            <h1>Aarya Innovtech visuals.</h1>
+            <h1>Aarya Technologies visuals.</h1>
             <p>
               A curated view of product installations, institutional interactions, team moments,
-              and recognition visuals from the Aarya Innovtech journey.
+              and recognition visuals from the Aarya Technologies journey.
             </p>
             <div className="gallery-page-actions">
               <button className="button primary" type="button" onClick={() => scrollToGallerySection(gallerySections[0].id)}>

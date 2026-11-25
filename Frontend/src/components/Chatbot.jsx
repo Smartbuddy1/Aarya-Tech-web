@@ -7,11 +7,11 @@ import ReactMarkdown from 'react-markdown';
 // Initialize Gemini API
 const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
-const SYSTEM_PROMPT = `You are the official customer support AI for AARYA INNOVTECH PVT. LTD. (OEM manufacturer established in 2019, based in Nashik, Maharashtra).
-Your sole purpose is to provide accurate information about Aarya Innovtech, its website, products, technical specifications, kiosks, vending machines, waste management solutions, services, clients, careers, achievements, and contact details.
+const SYSTEM_PROMPT = `You are the official customer support AI for AARYA TECHNOLOGIES PVT. LTD. (OEM manufacturer established in 2019, based in Nashik, Maharashtra).
+Your sole purpose is to provide accurate information about Aarya Technologies, its website, products, technical specifications, kiosks, vending machines, waste management solutions, services, clients, careers, achievements, and contact details.
 
 ============================================================
-COMPLETE PRODUCT CATALOG & CATEGORIES OF AARYA INNOVTECH:
+COMPLETE PRODUCT CATALOG & CATEGORIES OF AARYA TECHNOLOGIES:
 ============================================================
 
 1. KIOSKS SERIES (Smart Buddy Interactive Kiosks):
@@ -38,9 +38,10 @@ COMPLETE PRODUCT CATALOG & CATEGORIES OF AARYA INNOVTECH:
 ============================================================
 COMPANY CONTACT & LOCATION:
 ============================================================
-- Company Name: Aarya Innovtech Pvt. Ltd.
-- Phone: +91 88067 96868 / +91 99238 10197
-- Email: sales@aaryainnovtech.com
+- Company Name: Aarya Technologies Pvt. Ltd.
+- Phone: +91 9923810197, +91 8806796868
+- Email: sales@theaaryatechnologies.com
+- Website: www.theaaryatechnologies.com
 - Regd. Office: 4A, Sayali Darshan A, Radha Nagar, Makhamalabad Road, Panchavati, Nashik - 422003
 - Factory: S-27, Near Emerson, Ambad MIDC, Nashik, Maharashtra - 422010
 - Working Hours: Sun - Fri: 09:00 AM - 06:00 PM (Saturday Closed)
@@ -48,11 +49,11 @@ COMPANY CONTACT & LOCATION:
 ============================================================
 STRICT RESPONSE RULES:
 ============================================================
-1. ONLY answer questions related to Aarya Innovtech Pvt. Ltd., its website, products, services, contact, careers, achievements, and company details.
-2. If the user greets (hii, hello, hey, namaskar), greet them warmly and present Aarya Innovtech's key offerings.
-3. If the user asks ANY question NOT related to Aarya Innovtech (e.g. general knowledge, math, other companies, chit-chat, movies, sports), you MUST strictly refuse by saying:
-   - In English: "Sorry, I can only provide information regarding Aarya Innovtech Pvt. Ltd. and our products/services. Please feel free to ask about our Kiosks, Eco Toilets, Composters, Vending Machines, or contact details!"
-   - In Marathi: "माफ करा, मी फक्त आर्या इनोव्हटेक (AARYA INNOVTECH) आणि आमच्या उत्पादनांविषयीच (उदा. कियोस्क, ईको टॉयलेट, कंपोस्टर, बायो-डायजेस्टर, व्हेंडिंग मशिन्स, संपर्क इत्यादी) माहिती देऊ शकतो. आपल्याला कंपनी किंवा आमच्या उत्पादनांविषयी काही विचारायचे असल्यास कृपया सांगा! 🙏"
+1. ONLY answer questions related to Aarya Technologies Pvt. Ltd., its website, products, services, contact, careers, achievements, and company details.
+2. If the user greets (hii, hello, hey, namaskar), greet them warmly and present Aarya Technologies's key offerings.
+3. If the user asks ANY question NOT related to Aarya Technologies (e.g. general knowledge, math, other companies, chit-chat, movies, sports), you MUST strictly refuse by saying:
+   - In English: "Sorry, I can only provide information regarding Aarya Technologies Pvt. Ltd. and our products/services. Please feel free to ask about our Kiosks, Eco Toilets, Composters, Vending Machines, or contact details!"
+   - In Marathi: "माफ करा, मी फक्त आर्या टेक्नॉलॉजीज (AARYA TECHNOLOGIES) आणि आमच्या उत्पादनांविषयीच (उदा. कियोस्क, ईको टॉयलेट, कंपोस्टर, बायो-डायजेस्टर, व्हेंडिंग मशिन्स, संपर्क इत्यादी) माहिती देऊ शकतो. आपल्याला कंपनी किंवा आमच्या उत्पादनांविषयी काही विचारायचे असल्यास कृपया सांगा! 🙏"
 4. If the user asks in Marathi (Devanagari or Romanized Marathi), ALWAYS reply in Marathi.`;
 
 const SUGGESTED_QUESTIONS = [
@@ -94,7 +95,7 @@ const FALLBACK_TOPICS = [
       /\bhow\s+are\s+you\b/i,
       /\bkasa\s+aahes?\b/i
     ],
-    responseEn: `Hello! 👋 Welcome to **AARYA INNOVTECH PVT. LTD.** 🏢
+    responseEn: `Hello! 👋 Welcome to **AARYA TECHNOLOGIES PVT. LTD.** 🏢
 
 We are an OEM manufacturing company established in 2019 based in Nashik, Maharashtra, specializing in smart public automation, sanitation, and sustainable waste management solutions.
 
@@ -105,7 +106,7 @@ We are an OEM manufacturing company established in 2019 based in Nashik, Maharas
 • 🍫 **Automated Vending**: Sanitary Napkin Vending Machines & Snack Dispensers
 
 How may I assist you today? Feel free to ask for product specifications, pricing, or company details!`,
-    responseMr: `नमस्कार! 🙏 **आर्या इनोव्हटेक प्रायव्हेट लिमिटेड (AARYA INNOVTECH PVT. LTD.)** मध्ये आपले सहर्ष स्वागत आहे! 🏢
+    responseMr: `नमस्कार! 🙏 **आर्या टेक्नॉलॉजीज प्रायव्हेट लिमिटेड (AARYA TECHNOLOGIES PVT. LTD.)** मध्ये आपले सहर्ष स्वागत आहे! 🏢
 
 आम्ही २०१९ पासून नाशिक, महाराष्ट्र येथे कार्यरत अग्रगण्य OEM मॅन्युफॅक्चरिंग कंपनी असून, स्मार्ट पब्लिक ऑटोमेशन, स्वच्छता तंत्रज्ञान आणि पर्यावरणपूरक कचरा व्यवस्थापनात तज्ज्ञ आहोत.
 
@@ -125,8 +126,8 @@ How may I assist you today? Feel free to ask for product specifications, pricing
       /\b(dhanyawad|dhanyavad|abhaar|abari|ok\s*thanks)\b/i,
       /धन्यवाद|आभार|आभारी\s*आहे|थँक्यू|वेलकम/i
     ],
-    responseEn: `You're very welcome! 😊 If you have any more questions about **Aarya Innovtech's** products, kiosks, waste management solutions, or services, please feel free to ask. I'm here to help!`,
-    responseMr: `आपले स्वागत आहे! 😊 आपल्याला **आर्या इनोव्हटेकच्या** कोणत्याही उत्पादनाविषयी (कियोस्क, ईको टॉयलेट, कंपोस्टर इ.) किंवा सेवेविषयी आणखी काही माहिती हवी असल्यास नक्की विचारा. मी मदतीसाठी नेहमी तत्पर आहे!`
+    responseEn: `You're very welcome! 😊 If you have any more questions about **Aarya Technologies's** products, kiosks, waste management solutions, or services, please feel free to ask. I'm here to help!`,
+    responseMr: `आपले स्वागत आहे! 😊 आपल्याला **आर्या टेक्नॉलॉजीजच्या** कोणत्याही उत्पादनाविषयी (कियोस्क, ईको टॉयलेट, कंपोस्टर इ.) किंवा सेवेविषयी आणखी काही माहिती हवी असल्यास नक्की विचारा. मी मदतीसाठी नेहमी तत्पर आहे!`
   },
   {
     id: "acknowledgment",
@@ -151,7 +152,7 @@ How may I assist you today? Feel free to ask for product specifications, pricing
       /\btumch(a|e)\s+nav\b/i,
       /कंपनीचे\s*नाव|कंपनीचं\s*नाव|नाव\s*काय\s*आहे|कोणती\s*कंपनी/i
     ],
-    responseEn: `Our company name is **AARYA INNOVTECH PVT. LTD.** 🏢
+    responseEn: `Our company name is **AARYA TECHNOLOGIES PVT. LTD.** 🏢
 
 We are an OEM engineering and manufacturing company established in 2019 based in Nashik, Maharashtra.
 
@@ -162,7 +163,7 @@ We are an OEM engineering and manufacturing company established in 2019 based in
 • 🍫 **Automated Sanitary & Snack Vending Machines**
 
 How can I help you today?`,
-    responseMr: `आमच्या कंपनीचे नाव **आर्या इनोव्हटेक प्रायव्हेट लिमिटेड (AARYA INNOVTECH PVT. LTD.)** आहे. 🏢
+    responseMr: `आमच्या कंपनीचे नाव **आर्या टेक्नॉलॉजीज प्रायव्हेट लिमिटेड (AARYA TECHNOLOGIES PVT. LTD.)** आहे. 🏢
 
 आम्ही २०१९ पासून नाशिक, महाराष्ट्र येथे कार्यरत अग्रगण्य OEM मॅन्युफॅक्चरिंग कंपनी आहोत.
 
@@ -181,24 +182,24 @@ How can I help you today?`,
       /\b(founder|directors?|ceo|owner|proprietor|management|leadership|who\s+started|who\s+owns|who\s+founded|who\s+is\s+the\s+(boss|head|leader|founder|director|owner))\b/i,
       /संस्थापक|डायरेक्टर|संचालक|मालक|प्रमुख|कंपनी\s*कोणाची/i
     ],
-    responseEn: `👤 **Leadership & Management - Aarya Innovtech Pvt. Ltd.**:
+    responseEn: `👤 **Leadership & Management - Aarya Technologies Pvt. Ltd.**:
 
-• **Company**: Aarya Innovtech Pvt. Ltd. (Brand: **SMART BUDDY**)
+• **Company**: Aarya Technologies Pvt. Ltd. (Brand: **SMART BUDDY**)
 • **Leadership**: The company is led by a veteran Engineering Director bringing over **16+ years of specialized experience** in industrial automation, special purpose machines, and sustainable hygiene engineering.
 • **Establishment**: Founded in 2019 in Nashik, Maharashtra as a pioneering indigenous OEM manufacturer.
 • **Corporate Office**: 4A, Sayali Darshan A, Radha Nagar, Makhamalabad Road, Panchavati, Nashik - 422003
 • **Factory**: S-27, Near Emerson, Ambad MIDC, Nashik, Maharashtra - 422010
 
-For executive inquiries, please contact **sales@aaryainnovtech.com** or call **+91 88067 96868**.`,
+For executive inquiries, please contact **sales@theaaryatechnologies.com** or call **+91 9923810197 / +91 8806796868**.`,
     responseMr: `👤 **नेतृत्व व व्यवस्थापन (Leadership & Management)**:
 
-• **कंपनी**: आर्या इनोव्हटेक प्रायव्हेट लिमिटेड (ब्रँड: **SMART BUDDY**)
+• **कंपनी**: आर्या टेक्नॉलॉजीज प्रायव्हेट लिमिटेड (ब्रँड: **SMART BUDDY**)
 • **संचालक व नेतृत्व (Director)**: कंपनीचे नेतृत्व इंडस्ट्रियल ऑटोमेशन आणि हायजिन उत्पादने क्षेत्रातील **१६+ वर्षांपेक्षा जास्त अनुभव** असणाऱ्या तज्ज्ञ संचालकांकडे आहे.
 • **स्थापना**: २०१९ पासून नाशिक, महाराष्ट्र येथे अग्रगण्य OEM उत्पादक म्हणून कार्यरत.
 • **कार्यालय**: ४ए, सायली दर्शन ए, राधा नगर, मखमलाबाद रोड, पंचवटी, नाशिक - ४२२००३
 • **फॅक्टरी**: एस-२७, एमर्सन जवळ, अंबड एमआयडीसी, नाशिक, महाराष्ट्र - ४२२०१०
 
-थेट व्यवस्थापनाशी संपर्क किंवा चौकशीसाठी **sales@aaryainnovtech.com** वर ईमेल करा किंवा **+91 88067 96868** वर कॉल करा.`
+थेट व्यवस्थापनाशी संपर्क किंवा चौकशीसाठी **sales@theaaryatechnologies.com** वर ईमेल करा किंवा **+91 9923810197 / +91 8806796868** वर कॉल करा.`
   },
   {
     id: "about_us",
@@ -212,9 +213,9 @@ For executive inquiries, please contact **sales@aaryainnovtech.com** or call **+
       /कंपनी\s*काय\s*करते/i,
       /बद्दल\s*सांगा/i
     ],
-    responseEn: `🏢 **About Aarya Innovtech Pvt. Ltd.**:
+    responseEn: `🏢 **About Aarya Technologies Pvt. Ltd.**:
 
-Established in 2019 in Nashik, Maharashtra, **Aarya Innovtech** is an ISO 9001:2015 certified OEM technology manufacturer delivering smart sanitation, automated waste recycling, and interactive hardware solutions across India.
+Established in 2019 in Nashik, Maharashtra, **Aarya Technologies** is an ISO 9001:2015 certified OEM technology manufacturer delivering smart sanitation, automated waste recycling, and interactive hardware solutions across India.
 
 🌟 **Core Domains:**
 1. **Interactive Kiosks**: Custom touchscreen terminals for e-governance, healthcare, ticketing, and retail.
@@ -223,9 +224,9 @@ Established in 2019 in Nashik, Maharashtra, **Aarya Innovtech** is an ISO 9001:2
 4. **Vending Automation**: Automated sanitary pad & snack vending dispensers.
 
 📍 **Offices**: Head Office in Panchavati, Nashik | Manufacturing Plant in Ambad MIDC, Nashik.`,
-    responseMr: `🏢 **आर्या इनोव्हटेक प्रायव्हेट लिमिटेड बद्दल माहिती**:
+    responseMr: `🏢 **आर्या टेक्नॉलॉजीज प्रायव्हेट लिमिटेड बद्दल माहिती**:
 
-२०१९ मध्ये नाशिक, महाराष्ट्र येथे स्थापन झालेली **आर्या इनोव्हटेक** ही आयएसओ (ISO 9001:2015) प्रमाणित अग्रगण्य मॅन्युफॅक्चरिंग कंपनी आहे.
+२०१९ मध्ये नाशिक, महाराष्ट्र येथे स्थापन झालेली **आर्या टेक्नॉलॉजीज** ही आयएसओ (ISO 9001:2015) प्रमाणित अग्रगण्य मॅन्युफॅक्चरिंग कंपनी आहे.
 
 🌟 **मुख्य कार्यक्षेत्रे:**
 १. **इंटरॅक्टिव्ह कियोस्क**: ई-गव्हर्नन्स, टेलिमेडिसिन, तिकीट व फूड सेल्फ-सर्व्हिस स्टेशन्स.
@@ -244,17 +245,17 @@ Established in 2019 in Nashik, Maharashtra, **Aarya Innovtech** is an ISO 9001:2
       /\bsampark\b/i,
       /\bpatta\b/i
     ],
-    responseEn: `📞 **Contact Aarya Innovtech**:
+    responseEn: `📞 **Contact Aarya Technologies**:
 
-• **Call Us**: +91 88067 96868 / +91 99238 10197
-• **Email Us**: sales@aaryainnovtech.com
+• **Call Us**: +91 9923810197, +91 8806796868
+• **Email Us**: sales@theaaryatechnologies.com
 • **Regd. Office**: 4A, Sayali Darshan A, Radha Nagar, Makhamalabad Road, Panchavati, Nashik - 422003
 • **Factory**: S-27, Near Emerson, Ambad MIDC, Nashik, Maharashtra - 422010
 • **Working Hours**: Sun - Fri: 09:00 AM - 06:00 PM`,
-    responseMr: `📞 **आर्या इनोव्हटेकशी संपर्क साधा**:
+    responseMr: `📞 **आर्या टेक्नॉलॉजीजशी संपर्क साधा**:
 
-• **फोन नंबर**: +91 88067 96868 / +91 99238 10197
-• **ईमेल**: sales@aaryainnovtech.com
+• **फोन नंबर**: +91 9923810197, +91 8806796868
+• **ईमेल**: sales@theaaryatechnologies.com
 • **नोंदणीकृत कार्यालय**: ४ए, सायली दर्शन ए, राधा नगर, मखमलाबाद रोड, पंचवटी, नाशिक - ४२२००३
 • **फॅक्टरी**: एस-२७, एमर्सन जवळ, अंबड एमआयडीसी, नाशिक, महाराष्ट्र - ४२२०१०
 • **वेळ**: रविवार ते शुक्रवार: सकाळी ०९:०० ते संध्याकाळी ०६:००`
@@ -272,15 +273,15 @@ Established in 2019 in Nashik, Maharashtra, **Aarya Innovtech** is an ISO 9001:2
 
 Please share your specific requirements (Product model, capacity, installation location, and quantity) and our engineering team will provide a customized quotation:
 
-• **Email**: sales@aaryainnovtech.com
-• **Call / WhatsApp**: +91 88067 96868 / +91 99238 10197
+• **Email**: sales@theaaryatechnologies.com
+• **Call / WhatsApp**: +91 9923810197, +91 8806796868
 • **Working Hours**: Sun - Fri: 09:00 AM - 06:00 PM`,
     responseMr: `💰 **किंमत / कोटेशन मिळवण्यासाठी**:
 
 कृपया तुमच्या गरजेनुसार मॉडेल, क्षमता आणि ठिकाण सांगा. आमची इंजिनिअरिंग टीम तुम्हाला त्वरित कोटेशन पाठवेल:
 
-• **ईमेल**: sales@aaryainnovtech.com
-• **कॉल / व्हॉट्सॲप**: +91 88067 96868 / +91 99238 10197
+• **ईमेल**: sales@theaaryatechnologies.com
+• **कॉल / व्हॉट्सॲप**: +91 9923810197, +91 8806796868
 • **वेळ**: रविवार ते शुक्रवार: सकाळी ०९:०० ते संध्याकाळी ०६:००`
   },
   {
@@ -404,7 +405,7 @@ Please share your specific requirements (Product model, capacity, installation l
       /\binteractive\s*terminals?\b/i,
       /कियोस्क/i
     ],
-    responseEn: `At **AARYA INNOVTECH**, we manufacture a complete range of smart, heavy-duty **Interactive Kiosks**:
+    responseEn: `At **AARYA TECHNOLOGIES**, we manufacture a complete range of smart, heavy-duty **Interactive Kiosks**:
 
 1. 🖥️ **Computer Kiosk**: Public e-governance & visitor info terminal.
 2. 🎟️ **Ticket Kiosk**: Autonomous ticketing & token terminal with thermal printer.
@@ -413,8 +414,8 @@ Please share your specific requirements (Product model, capacity, installation l
 5. 🖨️ **Printing Kiosk**: Document print, scan & photocopy station.
 6. 🍔 **Food Kiosk**: Touchscreen self-ordering terminal for restaurants & food courts.
 
-📞 *Contact sales at sales@aaryainnovtech.com or +91 88067 96868 for quotes.*`,
-    responseMr: `**आर्या इनोव्हटेक (AARYA INNOVTECH)** कडे उपलब्ध असणारे सर्व अत्याधुनिक **इंटरॅक्टिव्ह कियोस्क**:
+📞 *Contact sales at sales@theaaryatechnologies.com or +91 9923810197 / +91 8806796868 for quotes.*`,
+    responseMr: `**आर्या टेक्नॉलॉजीज (AARYA TECHNOLOGIES)** कडे उपलब्ध असणारे सर्व अत्याधुनिक **इंटरॅक्टिव्ह कियोस्क**:
 
 1. 🖥️ **कॉम्प्युटर कियोस्क**: ई-गव्हर्नन्स व माहिती शोध स्टेशन.
 2. 🎟️ **तिकीट कियोस्क**: स्वयंचलित तिकीट व टोकन मशीन.
@@ -423,7 +424,7 @@ Please share your specific requirements (Product model, capacity, installation l
 5. 🖨️ **प्रिंटिंग कियोस्क**: डॉक्युमेंट प्रिंटिंग व झेरॉक्स स्टेशन.
 6. 🍔 **फूड कियोस्क**: रेस्टॉरंट्ससाठी सेल्फ-ऑर्डरिंग टचस्क्रीन कियोस्क.
 
-📞 *कोटेशनसाठी संपर्क: sales@aaryainnovtech.com किंवा +91 88067 96868.*`
+📞 *कोटेशनसाठी संपर्क: sales@theaaryatechnologies.com किंवा +91 9923810197 / +91 8806796868.*`
   },
   {
     id: "eco_toilet",
@@ -548,13 +549,13 @@ Please share your specific requirements (Product model, capacity, installation l
     ],
     responseEn: `🤝 **Our Valued Clients & Government Partners**:
 
-Aarya Innovtech is trusted by major public and private organizations across India:
+Aarya Technologies is trusted by major public and private organizations across India:
 • **Smart City Projects**: Pune, Ranchi, Thane, Nashik, Kalyan-Dombivli.
 • **Municipal Corporations & Urban Local Bodies** across Maharashtra, Jharkhand, Gujarat.
 • **Institutions**: DRDO, Indian Railways, Highway Authorities, IT Parks, Universities.`,
     responseMr: `🤝 **आमचे प्रमुख ग्राहक आणि शासकीय प्रकल्प**:
 
-आर्या इनोव्हटेकवर देशभरातील अग्रगण्य शासकीय व खासगी संस्थांचा विश्वास आहे:
+आर्या टेक्नॉलॉजीजवर देशभरातील अग्रगण्य शासकीय व खासगी संस्थांचा विश्वास आहे:
 • **स्मार्ट सिटी प्रकल्प**: पुणे, रांची, ठाणे, नाशिक, कल्याण-डोंबिवली.
 • **महानगरपालिका व नगरपालिका**: महाराष्ट्र, झारखंड, गुजरात इत्यादी.
 • **संस्था**: डीआरडीओ (DRDO), भारतीय रेल्वे, हायवे ऑथॉरिटी, आयटी पार्क्स व शैक्षणिक संस्था.`
@@ -586,7 +587,7 @@ Aarya Innovtech is trusted by major public and private organizations across Indi
       /\b(careers?|jobs?|hiring|vacanc(y|ies)|openings?|work\s+with\s+us|resume|cv|apply)\b/i,
       /नोकरी|करिअर|जॉब|भरती|अर्ज/i
     ],
-    responseEn: `💼 **Careers at Aarya Innovtech**:
+    responseEn: `💼 **Careers at Aarya Technologies**:
 
 We are constantly looking for talented engineers and professionals in:
 • Embedded Systems & IoT Engineering
@@ -594,8 +595,8 @@ We are constantly looking for talented engineers and professionals in:
 • Production & Assembly
 • Sales, Business Development & Technical Support
 
-📧 To apply, please send your resume to **sales@aaryainnovtech.com** or call **+91 88067 96868**.`,
-    responseMr: `💼 **आर्या इनोव्हटेक येथे करिअरच्या संधी (Careers)**:
+📧 To apply, please send your resume to **sales@theaaryatechnologies.com** or call **+91 9923810197 / +91 8806796868**.`,
+    responseMr: `💼 **आर्या टेक्नॉलॉजीज येथे करिअरच्या संधी (Careers)**:
 
 आम्ही नेहमी प्रतिभावान इंजिनिअर्स आणि तंत्रज्ञांच्या शोधात असतो:
 • एम्बेडेड सिस्टीम्स व आयओटी (IoT) इंजिनिअरिंग
@@ -603,7 +604,7 @@ We are constantly looking for talented engineers and professionals in:
 • उत्पादन व असेंब्ली
 • विक्री, बिझनेस डेव्हलपमेंट आणि टेक्निकल सपोर्ट
 
-📧 अर्ज करण्यासाठी आपला रेझ्युमे **sales@aaryainnovtech.com** वर पाठवा किंवा **+91 88067 96868** वर संपर्क साधा.`
+📧 अर्ज करण्यासाठी आपला रेझ्युमे **sales@theaaryatechnologies.com** वर पाठवा किंवा **+91 9923810197 / +91 8806796868** वर संपर्क साधा.`
   },
   {
     id: "gallery",
@@ -646,7 +647,7 @@ Detailed PDF technical brochures and spec sheets are available for:
 5. 🥤 PET Bottle Shredder (RVM)
 6. 🍫 Automated Vending Machines
 
-📥 You can download them directly from the respective product pages or email **sales@aaryainnovtech.com** to receive the complete catalog.`,
+📥 You can download them directly from the respective product pages or email **sales@theaaryatechnologies.com** to receive the complete catalog.`,
     responseMr: `📄 **उत्पादनांचे ब्रोशर्स आणि कॅटलॉग (Brochures & Catalogs)**:
 
 सर्व उत्पादनांचे सविस्तर टेक्निकल पीडीएफ ब्रोशर्स उपलब्ध आहेत:
@@ -657,7 +658,7 @@ Detailed PDF technical brochures and spec sheets are available for:
 ५. 🥤 पीईटी बॉटल श्रेडर (RVM)
 ६. 🍫 स्वयंचलित व्हेंडिंग मशिन्स
 
-📥 आपण उत्पादन पेजवरून थेट डाउनलोड करू शकता किंवा **sales@aaryainnovtech.com** वर ईमेल करू शकता.`
+📥 आपण उत्पादन पेजवरून थेट डाउनलोड करू शकता किंवा **sales@theaaryatechnologies.com** वर ईमेल करू शकता.`
   },
   {
     id: "all_products",
@@ -666,7 +667,7 @@ Detailed PDF technical brochures and spec sheets are available for:
       /\b((all\s*)?products?(\s*(list|catalog|range|models?))?|what\s+do\s+you\s+(manufacture|make|sell|offer))\b/i,
       /सर्व\s*उत्पादने|उत्पादने|प्रॉडक्ट्स/i
     ],
-    responseEn: `🏭 **Aarya Innovtech - Complete Product Range**:
+    responseEn: `🏭 **Aarya Technologies - Complete Product Range**:
 
 1. 🚽 **Sanitation**: Electronic ECO Toilets, Bio-Digester Systems, Sanitary Pad Incinerators.
 2. ♻️ **Waste Management**: Organic Waste Composters (OWC), PET Bottle Shredders / RVM.
@@ -674,7 +675,7 @@ Detailed PDF technical brochures and spec sheets are available for:
 4. 🍫 **Automated Vending**: Sanitary Napkin Vending Machines, Food & Beverage Vending Machines.
 
 *Ask me about any specific product for detailed specifications!*`,
-    responseMr: `🏭 **आर्या इनोव्हटेक - सर्व उत्पादने (All Products)**:
+    responseMr: `🏭 **आर्या टेक्नॉलॉजीज - सर्व उत्पादने (All Products)**:
 
 1. 🚽 **स्वच्छता उत्पादने**: इलेक्ट्रॉनिक ईको टॉयलेट्स, बायो-डायजेस्टर, सॅनिटरी पॅड इन्सिनरेटर.
 2. ♻️ **कचरा व्यवस्थापन**: ऑर्गॅनिक वेस्ट कंपोस्टर (OWC), पीईटी बॉटल श्रेडर (RVM).
@@ -713,12 +714,12 @@ const getFallbackResponse = (query) => {
   }
 
   if (isMarathi) {
-    return `माफ करा, मी फक्त **आर्या इनोव्हटेक (AARYA INNOVTECH)** आणि आमच्या उत्पादनांविषयीच (उदा. कियोस्क, ईको टॉयलेट, कंपोस्टर, बायो-डायजेस्टर, व्हेंडिंग मशिन्स, संपर्क इत्यादी) माहिती देऊ शकतो. 🙏
+    return `माफ करा, मी फक्त **आर्या टेक्नॉलॉजीज (AARYA TECHNOLOGIES)** आणि आमच्या उत्पादनांविषयीच (उदा. कियोस्क, ईको टॉयलेट, कंपोस्टर, बायो-डायजेस्टर, व्हेंडिंग मशिन्स, संपर्क इत्यादी) माहिती देऊ शकतो. 🙏
 
 आपल्याला कंपनी किंवा आमच्या उत्पादनांविषयी काही विचारायचे असल्यास कृपया नक्की सांगा!`;
   }
 
-  return `Sorry, I can only provide information regarding **Aarya Innovtech Pvt. Ltd.** and our products/services.
+  return `Sorry, I can only provide information regarding **Aarya Technologies Pvt. Ltd.** and our products/services.
 
 If you would like to know anything about our solutions (such as **Interactive Kiosks**, **Electronic ECO Toilets**, **Waste Composters**, **Bio-Digesters**, **Vending Machines**, or **Contact Details**), please feel free to ask!`;
 };
@@ -728,7 +729,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState([
     {
       role: 'model',
-      text: "Hello 👋\nWelcome to AARYA INNOVTECH.\n\nI'm here to help you with:\n\n• Products & Kiosks\n• Pricing & Quotations\n• Technical Information\n• Product Selection\n• Company Details\n• Business Enquiries\n\nHow may I assist you today?"
+      text: "Hello 👋\nWelcome to AARYA TECHNOLOGIES.\n\nI'm here to help you with:\n\n• Products & Kiosks\n• Pricing & Quotations\n• Technical Information\n• Product Selection\n• Company Details\n• Business Enquiries\n\nHow may I assist you today?"
     }
   ]);
   const [input, setInput] = useState('');
@@ -788,7 +789,7 @@ export default function Chatbot() {
     setMessages([
       {
         role: 'model',
-        text: "Hello 👋\nWelcome to AARYA INNOVTECH.\n\nI'm here to help you with:\n\n• Products & Kiosks\n• Pricing & Quotations\n• Technical Information\n• Product Selection\n• Company Details\n• Business Enquiries\n\nHow may I assist you today?"
+        text: "Hello 👋\nWelcome to AARYA TECHNOLOGIES.\n\nI'm here to help you with:\n\n• Products & Kiosks\n• Pricing & Quotations\n• Technical Information\n• Product Selection\n• Company Details\n• Business Enquiries\n\nHow may I assist you today?"
       }
     ]);
   };
@@ -833,7 +834,7 @@ export default function Chatbot() {
                 <Bot size={20} />
                 <div>
                   <h3>AARYA AI</h3>
-                  <span>AARYA INNOVTECH PVT. LTD.</span>
+                  <span>AARYA TECHNOLOGIES PVT. LTD.</span>
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>

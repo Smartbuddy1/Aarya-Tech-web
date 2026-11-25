@@ -35,9 +35,9 @@ function ClientPage({ onNavigateHome }) {
               <strong>Our Clients</strong>
             </div>
             <span className="eyebrow light"><Sparkles size={15} /> Trusted partnerships</span>
-            <h1>Organizations and public bodies trust Aarya Innovtech systems.</h1>
+            <h1>Organizations and public bodies trust Aarya Technologies systems.</h1>
             <p>
-              Aarya Innovtech has worked with public bodies, institutions, and
+              Aarya Technologies has worked with public bodies, institutions, and
               organizations across India.
             </p>
             <div className="clients-page-actions">
@@ -74,7 +74,7 @@ function ClientPage({ onNavigateHome }) {
             </div>
             <div className="clients-page-note">
               <Building2 size={18} />
-              <p>Public bodies, institutions, and organizations served by Aarya Innovtech.</p>
+              <p>Public bodies, institutions, and organizations served by Aarya Technologies.</p>
             </div>
           </div>
         </div>

@@ -19,12 +19,12 @@ const policySections = [
   {
     icon: MessageCircle,
     title: "How we use it",
-    text: "We use your details only to reply to your enquiry, suggest suitable Aarya Innovtech products, prepare a quotation, coordinate a site discussion, or provide support.",
+    text: "We use your details only to reply to your enquiry, suggest suitable Aarya Technologies products, prepare a quotation, coordinate a site discussion, or provide support.",
   },
   {
     icon: ShieldCheck,
     title: "Sharing",
-    text: "We do not sell or rent your personal information. We share it only with the Aarya Innov Tech team, required service partners, or when required by law.",
+    text: "We do not sell or rent your personal information. We share it only with the Aarya Technologies team, required service partners, or when required by law.",
   },
   {
     icon: Lock,
@@ -44,11 +44,11 @@ function PrivacyPolicyPage({ onNavigateHome }) {
               <ArrowRight size={14} />
               <strong>Privacy Policy</strong>
             </div>
-            <span className="eyebrow light"><ShieldCheck size={15} /> Aarya Innov Tech</span>
+            <span className="eyebrow light"><ShieldCheck size={15} /> Aarya Technologies</span>
             <h1>Privacy Policy</h1>
             <p>
-              This policy explains how Aarya Innov Tech uses enquiry information received
-              through the Aarya Innovtech website for hygiene-sector products and public utility solutions.
+              This policy explains how Aarya Technologies uses enquiry information received
+              through the Aarya Technologies website for hygiene-sector products and public utility solutions.
             </p>
           </div>
 
