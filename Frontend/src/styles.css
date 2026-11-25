@@ -5198,7 +5198,7 @@ a.footer-contact-item:hover i {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 button:focus-visible,
@@ -17894,11 +17894,14 @@ button:disabled,
    COMPREHENSIVE MOBILE RESPONSIVE ENHANCEMENTS
    ========================================================= */
 
-/* Prevent any accidental horizontal scrolling */
-html,
+/* Prevent any accidental horizontal scrolling without causing double scrollbars */
+html {
+  overflow-x: clip !important;
+}
+
 body {
-  overflow-x: hidden !important;
-  max-width: 100vw !important;
+  overflow-x: clip !important;
+  overflow-y: visible !important;
   width: 100% !important;
   position: relative;
 }
